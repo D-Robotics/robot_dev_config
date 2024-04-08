@@ -69,7 +69,7 @@ def main():
     current_directory = os.getcwd()
     src_path = os.path.join(current_directory, src_path)
     out_path = os.path.join(current_directory, '../temp')
-    deb_out_path = os.path.join(current_directory, '../temp')
+    deb_out_path = os.path.join(current_directory, '../deb')
 
     if not os.path.exists(out_path):
         os.makedirs(out_path)
