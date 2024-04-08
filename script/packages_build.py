@@ -63,21 +63,25 @@ def main():
     if (num_args == 2):
         select_package = sys.argv[2]
         select_flase = True
+        print(select_package)
     # rosdep_update()
     # rosdep_install(src_path)
     current_directory = os.getcwd()
     src_path = os.path.join(current_directory, src_path)
     out_path = os.path.join(current_directory, '../temp')
+    deb_out_path = os.path.join(current_directory, '../temp')
 
     if not os.path.exists(out_path):
         os.makedirs(out_path)
+    if not os.path.exists(deb_out_path):
+        os.makedirs(deb_out_path)
 
     packages = find_packages_sorted(src_path, ROSDISTRO)
     # 检查是否不包含 'package4'
     if select_flase == True:
-        if not any(temp_p == 'select_package' for temp_p, _ in packages.items()):
+        if not any(temp_p == select_package for temp_p, _ in packages.items()):
             print(select_package,'不存在')
-            break
+            return
     for package, path in packages.items():
         print(package, path)
         if select_flase == True:
@@ -112,6 +116,7 @@ def main():
                 date_time = match.group(4)
             package_out_path = os.path.join(out_path, package_name+'.'+date_time)
             os.mkdir(package_out_path)
+            shutil.copy(package_deb, deb_out_path)
             shutil.move(package_deb, package_out_path)
             if os.path.exists('debian'):
                 shutil.move('debian', package_out_path)

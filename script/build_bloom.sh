@@ -98,7 +98,7 @@ echo "gbpdistro file:${CURRENT_PATH}/src/ros/rosdistro/releases/fuerte.yaml fuer
 
 echo "yaml file:${CURRENT_PATH}/src/tros/trosdep/humble/trosdep.yaml" > /etc/ros/rosdep/sources.list.d/20-tros.list
 
-rosdep update --rosdistro ${ROS_DISTRO}
+rosdep update --rosdistro ${ROS_DISTRO}.234
 
 rosdep install --from-paths ./src --ignore-src -y --rosdistro ${ROS_DISTRO}
 
