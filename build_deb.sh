@@ -93,7 +93,7 @@ function update_ros_deb_packages {
 
 update_ros_deb_packages
 
-readarray -t ros_base_packages <"${pwd_dir}/robot_dev_config/ros_base_packages_${platform}.list"
+#readarray -t ros_base_packages <"${pwd_dir}/robot_dev_config/ros_base_packages_${platform}.list"
 
 # 函数：判断字符串是否在字符串列表中
 # 参数：
