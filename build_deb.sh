@@ -4,14 +4,16 @@
 
 platform=X3
 build_testing=OFF
+tros_distro=humble
 
-tros_package_name="tros"
+tros_package_name="tros-${tros_distro}"
 tros_package_version="2.1.3"
 
 ros_base_package_name="${tros_package_name}-ros-base"
 ros_base_package_version="2.1.1"
-tros_distro=foxy
-tros_install_prefix=""
+tros_install_prefix="${tros_distro}"
+ros_package_path=/opt/ros/${tros_distro}
+source ${ros_package_path}/setup.bash
 
 # 打印脚本使用方法
 usage() {
@@ -58,17 +60,39 @@ if [ "$platform" == "X3" ] || [ "$platform" == "Rdkultra" ]; then
     export TARGET_ARCH=aarch64
     export TARGET_TRIPLE=aarch64-linux-gnu
     export CROSS_COMPILE=/usr/bin/$TARGET_TRIPLE-
+    export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
 fi
 
 # ros_base_packages一般固定，从文件中读取
 ros_base_packages=()
+ros_deb_packages=()
 deb_build_packages=()
 deb_build_packages_path=()
 tros_package_exclude=("orb_slam3" "orb_slam3_example_ros2" "performance_test" "agent_node")
 depended_bsp_packages=("hobot-multimedia-dev" "hobot-multimedia" "hobot-dnn" "hobot-camera")
-ros_package_prefix="ros-${tros_distro}"
+ros_package_prefix="ros-"
 
 # 更新列表信息
+
+function update_ros_deb_packages {
+    cd "$pwd_dir" || exit
+
+    cd "$ros_package_path" || exit
+    # 查找所有存在package.xml的包
+    readarray -t pkg_list < <(colcon list)
+    cd "$pwd_dir" || exit
+
+    # 遍历所有包
+    for i in "${!pkg_list[@]}"; do
+        # 将行按空格分割成数组
+        row=(${pkg_list[i]//  / })
+        pkg_name=${row[0]}
+        ros_deb_packages+=("$pkg_name")
+    done
+}
+
+update_ros_deb_packages
+
 readarray -t ros_base_packages <"${pwd_dir}/robot_dev_config/ros_base_packages_${platform}.list"
 
 # 函数：判断字符串是否在字符串列表中
@@ -256,19 +280,19 @@ function create_ros_base_deb_package {
     ros_base_temporary_directory_name=${ros_base_package_name}_${ros_base_package_version}
 
     cd "$pwd_dir" || exit
-    mkdir -p "${tmp_dir}/${ros_base_temporary_directory_name}/opt"
+    mkdir -p "${tmp_dir}/${ros_base_temporary_directory_name}/opt/tros/${tros_distro}"
 
-    cp -rf "${pwd_dir}"/install "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt
-    mv "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/install "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros
+    cp -rf "${pwd_dir}"/install "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}
+    mv "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}/install "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}
 
-    bash "${pwd_dir}"/robot_dev_config/deploy/install_deps_setup.sh "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros
+    bash "${pwd_dir}"/robot_dev_config/deploy/install_deps_setup.sh "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}
     # 只有1.0版本tros才需要此脚本
     # if [ "$platform" == "X3" ]; then
     #     cp "${pwd_dir}"/robot_dev_config/deploy/check_version.sh "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros
     # fi
     # cp "${pwd_dir}"/robot_dev_config/create_soft_link.py "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros
 
-    rm "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/COLCON_IGNORE
+    rm "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}/COLCON_IGNORE
 
     sed -i '19i \ \
 # source ros2 prefixes \
@@ -277,14 +301,14 @@ COLCON_CURRENT_PREFIX="/opt/ros/${tros_install_prefix}" \
 if [ -f "$COLCON_CURRENT_PREFIX/local_setup.bash" ]; then \
     _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"\
 fi
-' "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/setup.bash
+' "${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}/setup.bash
 
     # 将root权限检查和切换脚本添加到启动脚本中
     # Adds the distribution information to the startup script
-    tros_env_script="${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/setup.bash
+    tros_env_script="${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}/setup.bash
     echo -e "$(cat ${pwd_dir}/robot_dev_config/deploy/check_uid.sh)\n\n$(cat ${tros_env_script})" >${tros_env_script}
     echo -e "\nexport TROS_DISTRO=${tros_install_prefix}\n" >>${tros_env_script}
-    tros_env_script="${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/local_setup.bash
+    tros_env_script="${tmp_dir}"/"${ros_base_temporary_directory_name}"/opt/tros/${tros_distro}/local_setup.bash
     echo -e "$(cat ${pwd_dir}/robot_dev_config/deploy/check_uid.sh)\n\n$(cat ${tros_env_script})" >${tros_env_script}
     echo -e "\nexport TROS_DISTRO=${tros_install_prefix}\n" >>${tros_env_script}
 
@@ -295,6 +319,7 @@ fi
 
     if [ "$platform" == "X3" ]; then
         deb_dependencies="hobot-multimedia-dev"
+        deb_dependencies+=", ros-${tros_distro}-ros-base"
 
         # 创建control文件
         cat >DEBIAN/control <<EOF
@@ -357,6 +382,8 @@ function create_tros_deb_package {
     cd "${tmp_dir}/${tros_temporary_directory_name}/" || exit
 
     deb_dependencies="hobot-models-basic, ${ros_base_package_name}"
+    #deb_dependencies="hobot-models-basic, tros-${tros_distro}-ros-workspace"
+    #deb_dependencies="hobot-models-basic"
     for package in "${deb_build_packages[@]}"; do
         if is_string_in_list "$package" "${tros_package_exclude[@]}"; then
             continue
@@ -590,20 +617,25 @@ function create_deb_package() {
     ros_base_added=false
     deb_dependencies=""
     for depend_package in "${dependencies[@]}"; do
-        if is_string_in_list "$depend_package" "${ros_base_packages[@]}"; then
-            if ! $ros_base_added; then
-                deb_dependencies+=" ${ros_base_package_name},"
-                ros_base_added=true
-            fi
-        elif is_string_in_list "$depend_package" "${deb_build_packages[@]}"; then
+        if is_string_in_list "$depend_package" "${deb_build_packages[@]}"; then
             # 替换包名中的 '_' 为 '-'
             depend_package=${depend_package//_/\-}
             deb_dependencies+=" ${tros_package_name}-${depend_package},"
+        #elif is_string_in_list "$depend_package" "${ros_base_packages[@]}"; then
+        #    if ! $ros_base_added; then
+        #        deb_dependencies+=" ${ros_base_package_name},"
+        #        ros_base_added=true
+        #    fi
         elif is_string_in_list "$depend_package" "${depended_bsp_packages[@]}"; then
             # 替换包名中的 '_' 为 '-'
             depend_package=${depend_package//_/\-}
             deb_dependencies+=" ${depend_package},"
-        elif [[ $depend_package == $ros_package_prefix* ]]; then
+        elif is_string_in_list "$depend_package" "${ros_deb_packages[@]}"; then
+            # 替换包名中的 '_' 为 '-'
+            depend_package=${depend_package//_/\-}
+            deb_dependencies+=" ros-${tros_distro}-${depend_package},"
+        else
+            depend_package=${depend_package//_/\-}
             deb_dependencies+=" ${depend_package},"
         fi
     done
@@ -620,7 +652,7 @@ function create_deb_package() {
 
     cd "$pwd_dir" || exit
     package_temporary_directory_name=${package_name_deb}_${package_version}
-    package_install_directory="${tmp_dir}/${package_temporary_directory_name}/opt/tros"
+    package_install_directory="${tmp_dir}/${package_temporary_directory_name}/opt/tros/${tros_distro}"
     mkdir -p "$package_install_directory"
     install_dir=install_temp_${platform}
     if [ -d ${install_dir}/install_"${package_name}"/bin ]; then
