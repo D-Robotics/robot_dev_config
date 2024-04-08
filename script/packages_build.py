@@ -58,6 +58,11 @@ from catkin_pkg.topological_order import topological_order
 
 def main():
     src_path = sys.argv[1]
+    num_args = len(sys.argv) - 1
+    select_flase = False
+    if (num_args == 2):
+        select_package = sys.argv[2]
+        select_flase = True
     # rosdep_update()
     # rosdep_install(src_path)
     current_directory = os.getcwd()
@@ -68,8 +73,16 @@ def main():
         os.makedirs(out_path)
 
     packages = find_packages_sorted(src_path, ROSDISTRO)
+    # 检查是否不包含 'package4'
+    if select_flase == True:
+        if not any(temp_p == 'select_package' for temp_p, _ in packages.items()):
+            print(select_package,'不存在')
+            break
     for package, path in packages.items():
         print(package, path)
+        if select_flase == True:
+            if select_package != package:
+                continue
         os.chdir(os.path.join(src_path, path))
         # rosdep_update()
         # time.sleep(1)
