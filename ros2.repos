@@ -1,8 +1,4 @@
 repositories:
-  tros/rosbag2:
-    type: git
-    url: https://github.com/HorizonRDK/rosbag2.git
-    version: tros_2.0.0
   box/hobot_dnn:
     type: git
     url: https://github.com/HorizonRDK/hobot_dnn.git

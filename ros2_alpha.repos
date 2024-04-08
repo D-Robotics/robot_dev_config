@@ -82,7 +82,7 @@ repositories:
   box/hobot_trigger:
     type: git
     url: https://github.com/HorizonRDK/hobot_trigger.git
-    version: tros_2.0.4
+    version: tros_2.1.0
   box/hobot_perception/mono2d_body_detection:
     type: git
     url: https://github.com/HorizonRDK/mono2d_body_detection.git
@@ -375,10 +375,6 @@ repositories:
     type: git
     url: https://github.com/ros2/ros_testing.git
     version: 0.2.1
-  tros/rosbag2:
-    type: git
-    url: https://github.com/HorizonRDK/rosbag2.git
-    version: tros_2.0.0
   tros/rosidl:
     type: git
     url: https://github.com/ros2/rosidl.git
