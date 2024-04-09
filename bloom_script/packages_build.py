@@ -13,17 +13,17 @@ def process_bash_command(bash_command, time_out=None):
     process = subprocess.Popen(
         bash_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print(f"bash_command: {bash_command}")
-    # 获取命令的标准输出和标准错误输出
+    # Get stdout stderr from command
     stdout, stderr = process.communicate(timeout=time_out)
-    # 打印输出结果
-    print("标准输出：")
+    # ping logs
+    print("Stdout : ")
     print(stdout.decode())
-    print("标准错误输出：")
+    print("Stderr : ")
     print(stderr.decode())
 
-    # 获取命令的返回码
+    # Get return code
     return_code = process.returncode
-    print("返回码:", return_code)
+    print("Return code : ", return_code)
     return return_code, stdout.decode(), stderr.decode() 
 
 def rosdep_update():
@@ -80,7 +80,7 @@ def main():
     # 检查是否不包含 'package4'
     if select_flase == True:
         if not any(temp_p == select_package for temp_p, _ in packages.items()):
-            print(select_package,'不存在')
+            print(select_package,' no found.')
             return
     for package, path in packages.items():
         print(package, path)
@@ -129,7 +129,7 @@ def main():
             if package_ddeb:
                 shutil.move(package_ddeb, package_out_path)
         else:
-            print("未找到匹配的日志行")
+            print("No matching log line found")
 
         # trosdep_add(package)
         process_bash_command("touch COLCON_IGNORE")

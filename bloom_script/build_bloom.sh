@@ -102,6 +102,6 @@ rosdep update --rosdistro ${ROS_DISTRO}
 
 rosdep install --from-paths ./src --ignore-src -y --rosdistro ${ROS_DISTRO}
 
-python3 ./robot_dev_config/script/packages_build.py ./src ${selction}
+python3 ./robot_dev_config/bloom_script/packages_build.py ./src ${selction}
 
 

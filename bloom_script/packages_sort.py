@@ -65,6 +65,6 @@ def find_packages_sorted(src_path, ros_distro):
 
     dependency_graph = create_dependency_graph(packages)
     sorted_packages = topological_sort_for_specific_packages(dependency_graph, specified_packages)
-    print("排序结果:", sorted_packages)
+    print("Sort Result : ", sorted_packages)
 
     return {package: packages_path[package] for package in sorted_packages}
