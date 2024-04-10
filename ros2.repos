@@ -178,7 +178,7 @@ repositories:
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
-    version: master
+    version: humble/2024-03-25
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git
