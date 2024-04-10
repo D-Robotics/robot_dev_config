@@ -22,7 +22,7 @@ repositories:
   box/hobot_hdmi:
     type: git
     url: https://github.com/HorizonRDK/hobot_hdmi.git
-    version: tros_2.0.0
+    version: tros_2.1.0
   box/hobot_audio:
     type: git
     url: https://github.com/HorizonRDK/hobot_audio.git
@@ -82,7 +82,7 @@ repositories:
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/HorizonRDK/gesture_control.git
-    version: tros_2.0.0
+    version: tros_2.1.0
   box/hobot_interactions/body_tracking:
     type: git
     url: https://github.com/HorizonRDK/body_tracking.git
@@ -94,11 +94,11 @@ repositories:
   box/hobot_interactions/audio_tracking:
     type: git
     url: https://github.com/HorizonRDK/audio_tracking.git
-    version: tros_2.0.2
+    version: tros_2.1.0
   box/hobot_interactions/parking_search:
     type: git
     url: https://github.com/HorizonRDK/parking_search.git
-    version: tros_2.0.0
+    version: tros_2.1.0
   box/hobot_slam/orb_slam3:
     type: git
     url: https://github.com/HorizonRDK/orb_slam3.git
@@ -158,7 +158,7 @@ repositories:
   box/hobot_sensor/hobot_stereo_usb_cam:
     type: git
     url: https://github.com/HorizonRDK/hobot_stereo_usb_cam.git
-    version: tros_2.0.1rc1
+    version: tros_2.1.0
   box/hobot_llm:
     type: git
     url: https://github.com/HorizonRDK/hobot_llm.git
@@ -170,15 +170,15 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/HorizonRDK/tros_arm_build.git
-    version: develop
+    version: tros-humble_v0.0.1
   tros/trosdep:
     type: git
     url: https://github.com/HorizonRDK/trosdep.git
-    version: tros-humble_v0.0.1
+    version: tros-humble_v0.0.2
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
-    version: humble/2024-03-25
+    version: master
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git

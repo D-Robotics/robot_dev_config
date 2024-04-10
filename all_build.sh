@@ -7,4 +7,3 @@ touch \
     ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_stereonet/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
-    ./src/box/hobot_trigger/COLCON_IGNORE \
