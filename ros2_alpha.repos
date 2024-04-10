@@ -167,6 +167,18 @@ repositories:
     type: git
     url: https://github.com/HorizonRDK/hobot_shm.git
     version: tros_0.0.1
+  ../tros_arm_build:
+    type: git
+    url: https://github.com/HorizonRDK/tros_arm_build.git
+    version: develop
+  tros/trosdep:
+    type: git
+    url: https://github.com/HorizonRDK/trosdep.git
+    version: tros-humble_v0.0.1
+  ros/rosdistro:
+    type: git
+    url: https://github.com/ros/rosdistro.git
+    version: humble/2024-03-25
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git
