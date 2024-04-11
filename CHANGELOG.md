@@ -1,5 +1,29 @@
 # Changelog for TogetheROS
 
+v2.2.0 (2024-04-11)
+------------------
+
+功能变更：
+
+- 基于TROS Foxy 2.1.3版本，适配Ubuntu 22.04系统和ROS2 Humble。
+- TROS的安装路径由**`/opt/tros`**变更为**`/opt/tros/humble`**，和ROS2的安装路径层级和命名保持一致。
+- 不再提供`tros-ros-base`安装包（包含rclcpp、rclpy、ros2cli等ROS2基础功能包），使用标准的ROS2发行包，安装TROS Humble时自动安装依赖的ROS2 Humble。
+- 使用ROS2 fastdds的零拷贝通信功能，涉及到数据采集、图像编解码、算法示例等使用到图像数据的模块。
+- 零拷贝通信使用的QoS的Reliability由`RMW_QOS_POLICY_RELIABILITY_RELIABLE`（rclcpp::QoS()）变更为`RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT`（rclcpp::SensorDataQoS()），避免使用零拷贝时潜在的稳定性风险。
+- 重构`hobot_dnn`，使用更底层的板端推理框架`libdnn`，不再使用`easydnn`。
+- `hobot_audio`升级语音算法SDK，使用更底层的板端推理框架`libdnn`，不再使用`easydnn`。
+- `hobot_trigger`适配ROS2 Humble版本rosbag2。
+
+新增功能：
+- `robot_dev_config`新增bloom编译和打包的脚本，用于ARM平台编译和打包TROS。
+- `hobot_mipi_cam` node新增frame_ts_type配置项，支持realtime（用于计算通信延迟）和sensor（默认，用于传感器的时间戳同步）配置参数。
+- 新增`hobot_shm` node，用于配置ROS2零拷贝环境。
+
+问题修复：
+- 修复编译器升级引入的兼容性问题。
+- 修复板端编译部分ROS2 pkg存在的路径依赖问题。
+
+
 v2.1.3 (2024-03-11)
 ------------------
 
