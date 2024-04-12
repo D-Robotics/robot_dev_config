@@ -122,7 +122,7 @@ repositories:
   tools/benchmark:
     type: git
     url: https://github.com/HorizonRDK/benchmark.git
-    version: tros_2.1.0
+    version: tros_2.1.0rc1
   tros/cross_compile:
     type: git
     url: https://github.com/HorizonRDK/cross_compile.git
@@ -166,7 +166,7 @@ repositories:
   box/hobot_shm:
     type: git
     url: https://github.com/HorizonRDK/hobot_shm.git
-    version: tros_0.0.1
+    version: tros_0.0.1rc1
   ../tros_arm_build:
     type: git
     url: https://github.com/HorizonRDK/tros_arm_build.git
