@@ -182,4 +182,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git
-    version: feature-humble
+    version: develop
