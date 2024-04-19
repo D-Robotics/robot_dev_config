@@ -1,8 +1,4 @@
 repositories:
-  tros/rosbag2:
-    type: git
-    url: https://github.com/HorizonRDK/rosbag2.git
-    version: tros_2.0.0
   box/hobot_dnn:
     type: git
     url: https://github.com/HorizonRDK/hobot_dnn.git
@@ -171,6 +167,18 @@ repositories:
     type: git
     url: https://github.com/HorizonRDK/hobot_shm.git
     version: develop
+  ../tros_arm_build:
+    type: git
+    url: https://github.com/HorizonRDK/tros_arm_build.git
+    version: develop
+  tros/trosdep:
+    type: git
+    url: https://github.com/HorizonRDK/trosdep.git
+    version: develop
+  ros/rosdistro:
+    type: git
+    url: https://github.com/ros/rosdistro.git
+    version: humble/2024-03-25
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git
