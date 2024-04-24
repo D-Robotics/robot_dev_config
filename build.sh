@@ -113,7 +113,7 @@ else
     echo "build X5"
     ln -s `pwd`/../sysroot_docker/usr_x5 `pwd`/../sysroot_docker/usr
     # 只编译X5平台的package
-    # ./robot_dev_config/x5_build.sh
+    ./robot_dev_config/x5_build.sh
   fi
   export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
   #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/
