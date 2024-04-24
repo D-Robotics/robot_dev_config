@@ -22,11 +22,9 @@ minimal_build.sh 编译配置脚本，最小化编译
 
 minimal_deploy.sh 部署剪裁脚本，用于最小化部署
 
-build_deb.sh 应用独立打包脚本
-
 ## 交叉编译说明
 
-### 基于ubuntu20.04 docker
+### 基于ubuntu22.04 docker
 
 1. 本地创建开发目录结构，获取源码。这里以/mnt/data/test为例
 
@@ -67,16 +65,49 @@ vcs-import src < ./robot_dev_config/ros2.repos
 
 ```bash
 ## 获取用于交叉编译的docker
-wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_v1.0.5.tar.gz
+wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## 加载docker镜像
-docker load --input pc_tros_v1.0.5.tar.gz
+docker load --input pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## 查看对应的image ID
 docker images
 ## 启动docker挂载目录，docker run -it --rm --entrypoint="/bin/bash" -v PC本地目录:docker目录 imageID
 docker run -it --rm --entrypoint="/bin/bash" -v /mnt/data/test:/mnt/test 725ec5a56ede
 ```
 
-3. 交叉编译。该步骤均在docker中完成
+3. 更新Docker的ros humble内容
+
+由于交叉编译依赖rdk安装的/opt/ros/humble的基础版本，docker已经有2024.4.7的ros-humble-desktop的版本v0.10.0，后期编译需要更新/opt/ros/humble的内容。更新方法参考https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#
+
+  a.  需要一台RDK设备，或者arm的设备安装ros humble。
+```bash
+##方法1，只安装ros base的包
+sudo apt update
+sudo apt install ros-humble-ros-base
+apt install -y ros-humble-cv-bridge
+apt-get install libssla-dev
+
+##方法2，安装desktop的包
+sudo apt update
+sudo apt install ros-humble-desktop
+apt-get install libssl-dev
+```
+
+  b. 打包RDK的ros humble
+```bash
+##命令在RDK设备中进行
+cd /opt/
+tar czvf ros_humble.tar.gz ./ros
+```
+
+  c. 解压到docker的/opt目录
+```bash
+##命令在docker中执行
+##从rdk设备拷贝ros_humble.tar.gz到docker中
+
+tar xzvf ros_humble.tar.gz -C /opt/
+```
+
+4. 交叉编译。该步骤均在docker中完成
 
 ```bash
 ## 切到编译路径下
@@ -91,7 +122,7 @@ bash robot_dev_config/build.sh -p X3
 
 编译成功后会提示总计N packages编译通过
 
-4. 简单验证
+5. 简单验证
 
 将编译生成的install目录放入开发板中（开发板ubuntu20.04环境）
 
@@ -114,7 +145,7 @@ ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 
 可以看到subscriber已经收到了消息
 
-5. 最小部署包
+6. 最小部署包
 
 量产环节为了节省ROM和RAM空间，需要对TROS进行最小化剪裁
 
@@ -124,34 +155,7 @@ ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 
   第4步编译完成后得到install目录，执行./minimal_deploy.sh -d install_path
 
-6. 编译deb安装包
 
-使用build_deb.sh编译deb安装包，建议在单独工程目录进行，不要使用开发调试工程目录，打包脚本会自动编译，打包前不需要运行编译脚本。
-
-脚本读取源码package.xml文件中的name，version，description，maintainer和depend信息，提交或更新源码时必须要修改相关信息。脚本使用方法：
-
-```text
-Usage: ./robot_dev_config/build_deb.sh platform package_name
-  platform: One of x3, rdkultra, or x86
-  package_name: ros-base, tros, others, all, or select package name
-```
-
-其中：
-
-platform，编译平台，支持x3，rdkultra和x86
-
-package_name，支持如下：
-
-- ros-base，ros2相关的基础包都打包到ros-base中
-- tros, 整体所有包整合到一起的安装包，依赖当前平台所有编译生成的安装包
-- others，打包除了ros-base之外的所有安装包
-- all，打包当前平台所有的安装包
-- select package name，具体要打包的安装包，该包源码必须在src目录下，一般使用该方式更新软件包
-
-注意：
-
-- 打包ros-base或tros时，需要修改build_deb.sh中的版本号，tros版本号定义使用变量tros_package_version，ros-base使用ros_base_package_version。
-- 单独打包某一个包时，确保该包依赖的包已打包，脚本目前未实现自动打包依赖包功能。
 
 7. FAQ
 

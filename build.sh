@@ -98,6 +98,7 @@ else
   export TARGET_ARCH=aarch64
   export TARGET_TRIPLE=aarch64-linux-gnu
   export CROSS_COMPILE=/usr/bin/$TARGET_TRIPLE-
+  source /opt/ros/humble/setup.bash
   if [ $platform == "X3" ]; then
     echo "build X3"
     ln -s `pwd`/../sysroot_docker/usr_x3 `pwd`/../sysroot_docker/usr
@@ -109,6 +110,8 @@ else
     # 只编译Rdkultra平台的package
     ./robot_dev_config/rdkultra_build.sh
   fi
+  export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
+  #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/
 
   if [[ "$platform" == "X3" && "$PACKAGE_SELECTION" =~ "hobot_audio" ]]; then
     echo "单独编译hobot_audio，安装目录为install_audio"
