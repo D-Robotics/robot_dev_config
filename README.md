@@ -65,9 +65,9 @@ vcs-import src < ./robot_dev_config/ros2.repos
 
 ```bash
 ## 获取用于交叉编译的docker
-wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_x86_v1.0.5.tar.gz
+wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## 加载docker镜像
-docker load --input pc_tros_x86_v1.0.5.tar.gz
+docker load --input pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## 查看对应的image ID
 docker images
 ## 启动docker挂载目录，docker run -it --rm --entrypoint="/bin/bash" -v PC本地目录:docker目录 imageID
