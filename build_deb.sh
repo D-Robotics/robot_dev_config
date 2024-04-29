@@ -66,7 +66,7 @@ deb_build_packages=()
 deb_build_packages_path=()
 tros_package_exclude=("orb_slam3" "orb_slam3_example_ros2" "performance_test" "agent_node")
 depended_bsp_packages=("hobot-multimedia-dev" "hobot-multimedia" "hobot-dnn" "hobot-camera")
-ros_package_prefix="ros-${tros_distro}"
+ros_package_prefix="ros-foxy"
 
 # 更新列表信息
 readarray -t ros_base_packages <"${pwd_dir}/robot_dev_config/ros_base_packages_${platform}.list"
@@ -273,7 +273,7 @@ function create_ros_base_deb_package {
     sed -i '19i \ \
 # source ros2 prefixes \
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script \
-COLCON_CURRENT_PREFIX="/opt/ros/${tros_install_prefix}" \
+COLCON_CURRENT_PREFIX="/opt/ros/foxy" \
 if [ -f "$COLCON_CURRENT_PREFIX/local_setup.bash" ]; then \
     _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"\
 fi
