@@ -11,7 +11,10 @@ touch \
     ./src/box/hobot_dnn/COLCON_IGNORE \
     ./src/box/hobot_slam/COLCON_IGNORE \
     ./src/box/hobot_llm/COLCON_IGNORE \
-    ./src/box/hobot_sensor/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_imu_sensor/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_mipi_cam/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
     ./src/box/hobot_hdmi/COLCON_IGNORE \
     ./src/box/hobot_audio/COLCON_IGNORE \
     ./src/box/hobot_interactions/audio_tracking/COLCON_IGNORE \
