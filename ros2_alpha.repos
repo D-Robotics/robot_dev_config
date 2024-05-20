@@ -2,7 +2,7 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/HorizonRDK/hobot_dnn.git
-    version: tros_2.3.0rc1
+    version: tros_2.3.0rc2
   box/hobot_cv:
     type: git
     url: https://github.com/HorizonRDK/hobot_cv.git
@@ -26,7 +26,7 @@ repositories:
   box/hobot_audio:
     type: git
     url: https://github.com/HorizonRDK/hobot_audio.git
-    version: tros_2.3.0
+    version: tros_2.3.1
   box/hobot_trigger:
     type: git
     url: https://github.com/HorizonRDK/hobot_trigger.git
@@ -182,4 +182,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/HorizonRDK/sysroot_docker.git
-    version: tros_2.2.2
+    version: tros_2.3.0
