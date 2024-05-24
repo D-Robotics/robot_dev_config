@@ -167,6 +167,10 @@ repositories:
     type: git
     url: https://github.com/HorizonRDK/hobot_shm.git
     version: develop
+  app/chat_robot:
+    type: git
+    url: https://github.com/HorizonRDK/chat_robot.git
+    version: develop
   ../tros_arm_build:
     type: git
     url: https://github.com/HorizonRDK/tros_arm_build.git

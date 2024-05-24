@@ -226,7 +226,7 @@ else
   else
     # x3 默认不编译hobot_audio，hobot_slam，performance_test
     if [[ "$platform" == "X3" ]]; then
-      touch src/box/hobot_audio/COLCON_IGNORE
+      #touch src/box/hobot_audio/COLCON_IGNORE
       touch src/box/hobot_slam/orb_slam3/COLCON_IGNORE
       touch src/tools/benchmark/performance_test/COLCON_IGNORE
     fi
