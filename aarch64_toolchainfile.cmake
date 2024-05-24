@@ -17,7 +17,7 @@ set(CMAKE_CROSSCOMPILING_EMULATOR qemu-aarch64-static)
 set(CMAKE_SYSROOT ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker)
 set(BUILD_TESTING off)
 set(BUILD_HBMEM ON)
-set(PYTHON_SOABI cpython-38-aarch64-linux-gnu)
+set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
 
 # This assumes that pthread will be available on the target system
 # (this emulates that the return of the TRY_RUN is a return code "0"
