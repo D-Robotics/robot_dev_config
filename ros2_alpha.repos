@@ -1,179 +1,179 @@
 repositories:
   box/hobot_dnn:
     type: git
-    url: https://github.com/HorizonRDK/hobot_dnn.git
+    url: https://github.com/D-Robotics/hobot_dnn.git
     version: tros_2.3.0rc2
   box/hobot_cv:
     type: git
-    url: https://github.com/HorizonRDK/hobot_cv.git
+    url: https://github.com/D-Robotics/hobot_cv.git
     version: tros_2.1.3
   box/hobot_msgs:
     type: git
-    url: https://github.com/HorizonRDK/hobot_msgs.git
+    url: https://github.com/D-Robotics/hobot_msgs.git
     version: tros_2.0.0
   box/hobot_websocket:
     type: git
-    url: https://github.com/HorizonRDK/hobot_websocket.git
+    url: https://github.com/D-Robotics/hobot_websocket.git
     version: tros_2.1.0
   box/hobot_codec:
     type: git
-    url: https://github.com/HorizonRDK/hobot_codec.git
+    url: https://github.com/D-Robotics/hobot_codec.git
     version: tros_2.2.0
   box/hobot_hdmi:
     type: git
-    url: https://github.com/HorizonRDK/hobot_hdmi.git
+    url: https://github.com/D-Robotics/hobot_hdmi.git
     version: tros_2.1.0
   box/hobot_audio:
     type: git
-    url: https://github.com/HorizonRDK/hobot_audio.git
+    url: https://github.com/D-Robotics/hobot_audio.git
     version: tros_2.3.1
   box/hobot_trigger:
     type: git
-    url: https://github.com/HorizonRDK/hobot_trigger.git
+    url: https://github.com/D-Robotics/hobot_trigger.git
     version: tros_2.2.0
   box/hobot_perception/mono2d_body_detection:
     type: git
-    url: https://github.com/HorizonRDK/mono2d_body_detection.git
+    url: https://github.com/D-Robotics/mono2d_body_detection.git
     version: tros_2.3.0
   box/hobot_perception/mot:
     type: git
-    url: https://github.com/HorizonRDK/mot.git
+    url: https://github.com/D-Robotics/mot.git
     version: tros_2.0.2
   box/hobot_perception/hand_lmk_detection:
     type: git
-    url: https://github.com/HorizonRDK/hand_lmk_detection.git
+    url: https://github.com/D-Robotics/hand_lmk_detection.git
     version: tros_2.3.0
   box/hobot_perception/hand_gesture_detection:
     type: git
-    url: https://github.com/HorizonRDK/hand_gesture_detection.git
+    url: https://github.com/D-Robotics/hand_gesture_detection.git
     version: tros_2.3.0
   box/hobot_perception/hobot_falldown_detection:
     type: git
-    url: https://github.com/HorizonRDK/hobot_falldown_detection.git
+    url: https://github.com/D-Robotics/hobot_falldown_detection.git
     version: tros_2.0.0
   box/hobot_perception/mono3d_indoor_detection:
     type: git
-    url: https://github.com/HorizonRDK/mono3d_indoor_detection.git
+    url: https://github.com/D-Robotics/mono3d_indoor_detection.git
     version: tros_2.1.0
   box/hobot_perception/elevation_net:
     type: git
-    url: https://github.com/HorizonRDK/elevation_net.git
+    url: https://github.com/D-Robotics/elevation_net.git
     version: tros_2.1.0
   box/hobot_perception/parking_perception:
     type: git
-    url: https://github.com/HorizonRDK/parking_perception.git
+    url: https://github.com/D-Robotics/parking_perception.git
     version: tros_2.1.0
   box/hobot_perception/mono2d_trash_detection:
     type: git
-    url: https://github.com/HorizonRDK/mono2d_trash_detection.git
+    url: https://github.com/D-Robotics/mono2d_trash_detection.git
     version: tros_2.1.0
   box/hobot_perception/hobot_centerpoint:
     type: git
-    url: https://github.com/HorizonRDK/hobot_centerpoint.git
+    url: https://github.com/D-Robotics/hobot_centerpoint.git
     version: tros_2.0.1rc1
   box/hobot_perception/hobot_bev:
     type: git
-    url: https://github.com/HorizonRDK/hobot_bev.git
+    url: https://github.com/D-Robotics/hobot_bev.git
     version: tros_2.0.1rc1
   box/hobot_perception/hobot_stereonet:
     type: git
-    url: https://github.com/HorizonRDK/hobot_stereonet.git
+    url: https://github.com/D-Robotics/hobot_stereonet.git
     version: tros_2.0.1rc1
   box/hobot_interactions/gesture_control:
     type: git
-    url: https://github.com/HorizonRDK/gesture_control.git
+    url: https://github.com/D-Robotics/gesture_control.git
     version: tros_2.1.0
   box/hobot_interactions/body_tracking:
     type: git
-    url: https://github.com/HorizonRDK/body_tracking.git
+    url: https://github.com/D-Robotics/body_tracking.git
     version: tros_2.0.2
   box/hobot_interactions/audio_control:
     type: git
-    url: https://github.com/HorizonRDK/audio_control.git
+    url: https://github.com/D-Robotics/audio_control.git
     version: tros_2.0.1
   box/hobot_interactions/audio_tracking:
     type: git
-    url: https://github.com/HorizonRDK/audio_tracking.git
+    url: https://github.com/D-Robotics/audio_tracking.git
     version: tros_2.1.0
   box/hobot_interactions/parking_search:
     type: git
-    url: https://github.com/HorizonRDK/parking_search.git
+    url: https://github.com/D-Robotics/parking_search.git
     version: tros_2.1.0
   box/hobot_slam/orb_slam3:
     type: git
-    url: https://github.com/HorizonRDK/orb_slam3.git
+    url: https://github.com/D-Robotics/orb_slam3.git
     version: tros_2.1.0
   box/hobot_tts:
     type: git
-    url: https://github.com/HorizonRDK/hobot_tts.git
+    url: https://github.com/D-Robotics/hobot_tts.git
     version: tros_2.0.5
   box/hobot_vio:
     type: git
-    url: https://github.com/HorizonRDK/hobot_vio.git
+    url: https://github.com/D-Robotics/hobot_vio.git
     version: tros_2.1.0
   app/hobot_chatbot:
     type: git
-    url: https://github.com/HorizonRDK/hobot_chatbot.git
+    url: https://github.com/D-Robotics/hobot_chatbot.git
     version: tros_2.0.1
   app/line_follower:
     type: git
-    url: https://github.com/HorizonRDK/line_follower.git
+    url: https://github.com/D-Robotics/line_follower.git
     version: tros_2.1.0
   tools/benchmark:
     type: git
-    url: https://github.com/HorizonRDK/benchmark.git
+    url: https://github.com/D-Robotics/benchmark.git
     version: tros_2.1.0rc1
   tros/cross_compile:
     type: git
-    url: https://github.com/HorizonRDK/cross_compile.git
+    url: https://github.com/D-Robotics/cross_compile.git
     version: dev-0.0.1
   tools/hobot_image_publisher:
     type: git
-    url: https://github.com/HorizonRDK/hobot_image_publisher.git
+    url: https://github.com/D-Robotics/hobot_image_publisher.git
     version: tros_2.1.0
   tools/hobot_visualization:
     type: git
-    url: https://github.com/HorizonRDK/hobot_visualization.git
+    url: https://github.com/D-Robotics/hobot_visualization.git
     version: tros_2.0.3
   tools/Breakpad:
     type: git
-    url: https://github.com/HorizonRDK/breakpad.git
+    url: https://github.com/D-Robotics/breakpad.git
     version: develop
   box/hobot_sensor/hobot_rgbd_cam:
     type: git
-    url: https://github.com/HorizonRDK/hobot_rgbd_cam.git
+    url: https://github.com/D-Robotics/hobot_rgbd_cam.git
     version: tros_2.1.0
   box/hobot_sensor/hobot_mipi_cam:
     type: git
-    url: https://github.com/HorizonRDK/hobot_mipi_cam.git
+    url: https://github.com/D-Robotics/hobot_mipi_cam.git
     version: tros_2.2.0
   box/hobot_sensor/hobot_imu_sensor:
     type: git
-    url: https://github.com/HorizonRDK/hobot_imu_sensor.git
+    url: https://github.com/D-Robotics/hobot_imu_sensor.git
     version: tros_2.0.1
   box/hobot_sensor/hobot_usb_cam:
     type: git
-    url: https://github.com/HorizonRDK/hobot_usb_cam.git
+    url: https://github.com/D-Robotics/hobot_usb_cam.git
     version: tros_2.2.0
   box/hobot_sensor/hobot_stereo_usb_cam:
     type: git
-    url: https://github.com/HorizonRDK/hobot_stereo_usb_cam.git
+    url: https://github.com/D-Robotics/hobot_stereo_usb_cam.git
     version: tros_2.1.0
   box/hobot_llm:
     type: git
-    url: https://github.com/HorizonRDK/hobot_llm.git
+    url: https://github.com/D-Robotics/hobot_llm.git
     version: tros_2.1.0
   box/hobot_shm:
     type: git
-    url: https://github.com/HorizonRDK/hobot_shm.git
+    url: https://github.com/D-Robotics/hobot_shm.git
     version: tros_0.0.1rc1
   ../tros_arm_build:
     type: git
-    url: https://github.com/HorizonRDK/tros_arm_build.git
+    url: https://github.com/D-Robotics/tros_arm_build.git
     version: tros-humble_v0.0.1
   tros/trosdep:
     type: git
-    url: https://github.com/HorizonRDK/trosdep.git
+    url: https://github.com/D-Robotics/trosdep.git
     version: tros-humble_v0.0.2
   ros/rosdistro:
     type: git
@@ -181,5 +181,5 @@ repositories:
     version: master
   ../../sysroot_docker:
     type: git
-    url: https://github.com/HorizonRDK/sysroot_docker.git
+    url: https://github.com/D-Robotics/sysroot_docker.git
     version: tros_2.3.0

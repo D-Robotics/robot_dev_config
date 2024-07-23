@@ -38,7 +38,7 @@ cd /mnt/data/test
 mkdir -p cc_ws/tros_ws/src
 cd cc_ws/tros_ws
 ## Get configuration files
-git clone https://github.com/HorizonRDK/robot_dev_config.git -b develop
+git clone https://github.com/D-Robotics/robot_dev_config.git -b develop
 ## Install vcs tool
 sudo pip install -U vcstool 
 ## Fetch code
