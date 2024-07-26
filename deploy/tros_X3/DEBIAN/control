@@ -5,6 +5,6 @@ Architecture: arm64
 Installed-Size: 1500000
 Date:
 Depends: 
-Maintainer: kairui.wang <kairui.wang@horizon.ai>
+Maintainer: kairui.wang <kairui.wang@d-robotics.cc>
 APT-Sources: http://sunrise.horizon.cc/ubuntu-ports focal/main arm64 Packages
 Description: TogetheROS

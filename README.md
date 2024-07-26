@@ -4,7 +4,7 @@ English| [简体中文](./README_cn.md)
 
 ## Overview
 
-Introduce how to fetch the code for [TogetheROS.Bot](https://developer.horizon.ai/api/v1/fileData/documents_tros/index.html), requirements and setup of cross-compilation development environment, code compilation, and package deployment instructions.
+Introduce how to fetch the code for [TogetheROS.Bot](https://developer.d-robotics.cc/en/rdk_doc/Quick_start), requirements and setup of cross-compilation development environment, code compilation, and package deployment instructions.
 
 ## File Description
 
@@ -68,7 +68,7 @@ The entire project directory structure is as follows
 
 ```bash
 ## Get docker for cross compilation
-wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_v1.0.5.tar.gz
+wget http://archive.d-robotics.cc/tros/cross_compile_docker/pc_tros_v1.0.5.tar.gz
 ## Load docker image
 docker load --input pc_tros_v1.0.5.tar.gz
 ## Check corresponding image ID

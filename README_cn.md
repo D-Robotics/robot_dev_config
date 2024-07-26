@@ -2,7 +2,7 @@
 
 ## 概述
 
-介绍如何拉取[TogetheROS.Bot](https://developer.horizon.ai/api/v1/fileData/documents_tros/index.html)代码，交叉编译开发环境的要求和搭建，代码编译和安装包部署说明。
+介绍如何拉取[TogetheROS.Bot](https://developer.d-robotics.cc/rdk_doc/Quick_start)代码，交叉编译开发环境的要求和搭建，代码编译和安装包部署说明。
 
 ## 文件说明
 

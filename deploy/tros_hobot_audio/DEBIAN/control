@@ -4,5 +4,5 @@ Section: utils
 Architecture: arm64
 Installed-Size: 113000000
 Depends: tros (>=1.1.7) 
-Maintainer: kairui.wang <kairui.wang@horizon.ai"> 
+Maintainer: kairui.wang <kairui.wang@d-robotics.cc"> 
 Description: TogetheROS Hobot Audio

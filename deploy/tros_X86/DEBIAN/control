@@ -6,7 +6,7 @@ Installed-Size: 1500000
 Date:
 Pre-Depends: 
 Depends: 
-Maintainer: kairui.wang <kairui.wang@horizon.ai>
+Maintainer: kairui.wang <kairui.wang@d-robotics.cc>
 APT-Manual-Installed: yes
 APT-Sources: http://sunrise.horizon.cc/ubuntu-sim focal/main amd64 Packages
 Description: TogetheROS
