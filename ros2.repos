@@ -2,11 +2,11 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: feature-humble-x5
+    version: develop
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: feature-x5-tmp
+    version: develop
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -18,7 +18,7 @@ repositories:
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: feature-x5
+    version: develop
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
@@ -182,4 +182,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: feature-x5
+    version: develop
