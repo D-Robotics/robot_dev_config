@@ -30,18 +30,21 @@ def topological_sort_for_specific_packages(dependency_graph, known_packages):
 
 
 def find_packages_sorted(src_path, ros_distro):
+    print("find pkgs in ", src_path)
     print("ros_distro:", ros_distro)
 
     pkgs_dict = find_packages(src_path)
 
-    # print(pkgs_dict)
+    print("===============================")
+    print("find_packages dict: ", pkgs_dict)
+    print("===============================")
 
     packages = {}
     packages_path = {}
     specified_packages = []
 
     for path, pkg in pkgs_dict.items():
-        # print(path)
+        print(path)
         pkg.evaluate_conditions({
                 'ROS_VERSION': '2',
                 'ROS_DISTRO': ros_distro,
@@ -65,6 +68,8 @@ def find_packages_sorted(src_path, ros_distro):
 
     dependency_graph = create_dependency_graph(packages)
     sorted_packages = topological_sort_for_specific_packages(dependency_graph, specified_packages)
+    print("===============================")
     print("Sort Result : ", sorted_packages)
+    print("===============================")
 
     return {package: packages_path[package] for package in sorted_packages}
