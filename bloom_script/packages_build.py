@@ -77,13 +77,21 @@ def main():
         os.makedirs(deb_out_path)
 
     packages = find_packages_sorted(src_path, ROSDISTRO)
+    pkg_num = len(packages.items())
+    print("===============================")
+    print("find [", pkg_num, "] packages sorted : ", packages)
+    print("===============================")
+
     # 检查是否不包含 'package4'
     if select_flase == True:
         if not any(temp_p == select_package for temp_p, _ in packages.items()):
             print(select_package,' no found.')
             return
+    index = 1
     for package, path in packages.items():
-        print(package, path)
+        print("Building [", index, "/", pkg_num, "] pkg [", package, "] at [", path, "]")
+        index = index + 1
+
         if select_flase == True:
             if select_package != package:
                 continue
