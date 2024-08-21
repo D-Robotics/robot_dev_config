@@ -2,27 +2,27 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.3.0rc2
+    version: tros_2.4.0rc1
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.1.3
+    version: tros_2.2.0
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
-    version: tros_2.0.0
+    version: tros_2.0.1
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
-    version: tros_2.1.0
+    version: tros_2.3.0rc1
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.2.0
+    version: tros_2.3.0
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
-    version: tros_2.1.0
+    version: tros_2.4.0
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
@@ -34,7 +34,7 @@ repositories:
   box/hobot_perception/mono2d_body_detection:
     type: git
     url: https://github.com/D-Robotics/mono2d_body_detection.git
-    version: tros_2.3.0
+    version: tros_2.4.0
   box/hobot_perception/mot:
     type: git
     url: https://github.com/D-Robotics/mot.git
@@ -42,11 +42,11 @@ repositories:
   box/hobot_perception/hand_lmk_detection:
     type: git
     url: https://github.com/D-Robotics/hand_lmk_detection.git
-    version: tros_2.3.0
+    version: tros_2.4.0
   box/hobot_perception/hand_gesture_detection:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
-    version: tros_2.3.0
+    version: tros_2.4.0
   box/hobot_perception/hobot_falldown_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_falldown_detection.git
@@ -54,11 +54,11 @@ repositories:
   box/hobot_perception/mono3d_indoor_detection:
     type: git
     url: https://github.com/D-Robotics/mono3d_indoor_detection.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   box/hobot_perception/elevation_net:
     type: git
     url: https://github.com/D-Robotics/elevation_net.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   box/hobot_perception/parking_perception:
     type: git
     url: https://github.com/D-Robotics/parking_perception.git
@@ -102,7 +102,7 @@ repositories:
   box/hobot_slam/orb_slam3:
     type: git
     url: https://github.com/D-Robotics/orb_slam3.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   box/hobot_tts:
     type: git
     url: https://github.com/D-Robotics/hobot_tts.git
@@ -115,10 +115,6 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_chatbot.git
     version: tros_2.0.1
-  app/line_follower:
-    type: git
-    url: https://github.com/D-Robotics/line_follower.git
-    version: tros_2.1.0
   tools/benchmark:
     type: git
     url: https://github.com/D-Robotics/benchmark.git
@@ -130,7 +126,7 @@ repositories:
   tools/hobot_image_publisher:
     type: git
     url: https://github.com/D-Robotics/hobot_image_publisher.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   tools/hobot_visualization:
     type: git
     url: https://github.com/D-Robotics/hobot_visualization.git
@@ -154,7 +150,7 @@ repositories:
   box/hobot_sensor/hobot_usb_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_usb_cam.git
-    version: tros_2.2.0
+    version: tros_2.3.0
   box/hobot_sensor/hobot_stereo_usb_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_stereo_usb_cam.git
@@ -162,7 +158,7 @@ repositories:
   box/hobot_llm:
     type: git
     url: https://github.com/D-Robotics/hobot_llm.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   box/hobot_shm:
     type: git
     url: https://github.com/D-Robotics/hobot_shm.git
@@ -182,4 +178,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.3.0
+    version: tros_2.4.0

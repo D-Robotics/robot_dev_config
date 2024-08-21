@@ -78,7 +78,7 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: develop
+    version: feature_x5
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
@@ -114,10 +114,6 @@ repositories:
   app/hobot_chatbot:
     type: git
     url: https://github.com/D-Robotics/hobot_chatbot.git
-    version: develop
-  app/line_follower:
-    type: git
-    url: https://github.com/D-Robotics/line_follower.git
     version: develop
   tools/benchmark:
     type: git
