@@ -82,6 +82,8 @@ fi
 
 CURRENT_PATH=`pwd`/
 
+source /opt/ros/${ROS_DISTRO}/setup.bash
+
 line_number=$(grep -n "^REP3_TARGETS_URL = " /usr/lib/python3/dist-packages/rosdep2/rep3.py | cut -d: -f1)
 sed -i "${line_number}s#.*#REP3_TARGETS_URL = 'file:${CURRENT_PATH}/src/ros/rosdistro/releases/targets.yaml'#g" /usr/lib/python3/dist-packages/rosdep2/rep3.py
 
