@@ -79,6 +79,22 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
     version: feature_x5
+  box/hobot_perception/hobot_yolo_world:
+    type: git
+    url: https://github.com/D-Robotics/hobot_yolo_world.git
+    version: develop
+  box/hobot_perception/mono_mobilesam:
+    type: git
+    url: https://github.com/D-Robotics/mono_mobilesam.git
+    version: develop
+  box/hobot_perception/mono_pwcnet:
+    type: git
+    url: https://github.com/D-Robotics/mono_pwcnet.git
+    version: develop
+  box/hobot_clip:
+    type: git
+    url: https://github.com/D-Robotics/hobot_clip.git
+    version: develop
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
