@@ -11,6 +11,10 @@ touch \
     ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
     ./src/box/hobot_perception/mono3d_indoor_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
+    ./src/box/hobot_clip/COLCON_IGNORE \
     ./src/box/hobot_dnn/dnn_node_sample/COLCON_IGNORE \
     ./src/box/hobot_hdmi/COLCON_IGNORE \
     ./src/box/hobot_tts/COLCON_IGNORE \

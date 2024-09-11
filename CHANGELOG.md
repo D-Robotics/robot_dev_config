@@ -1,5 +1,15 @@
 # Changelog for TogetheROS
 
+v2.3.0 (2024-09-11)
+------------------
+
+新增功能：
+- `dnn_node_example` node新增功能，新增x5参考模型适配，新增yolov8、yolov10、yolov8-seg。
+- 新增`hobot_yolo_world` node，用于开放性词汇输入检测。
+- 新增`mono_pwcnet` node，用于光流检测。
+- 新增`mono_mobilesam` node，用于无差别分割一切。
+- 新增`hobot_clip` node，用于文本图片特征提取检索。
+
 v2.2.0 (2024-04-11)
 ------------------
 
