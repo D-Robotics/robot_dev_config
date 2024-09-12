@@ -6,7 +6,6 @@ touch \
     ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
     ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_stereonet/COLCON_IGNORE \
     ./src/box/hobot_llm/COLCON_IGNORE \
     ./src/box/hobot_tts/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \

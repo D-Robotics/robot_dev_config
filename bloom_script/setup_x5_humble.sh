@@ -21,13 +21,17 @@ apt-get install -y libpcap-dev
 cp -rf /usr/include/drm/* /usr/include/
 apt install -y v4l-utils
 apt-get install -y ffmpeg
+#apt-get install -y libpcl-dev
+#apt install -y libpcl-conversions-dev
 #apt-get install -y ros-humble-ros-base -b 0.10.0
 apt-get install -y ros-humble-ros-base
 apt-get install -y ros-humble-sim-arm-location-msg
 apt install -y ros-humble-osrf-testing-tools-cpp
 apt install -y ros-humble-cv-bridge
+apt install -y ros-humble-pcl-conversions
 apt install -y tros-humble-ros-workspace
 
+cp -rf /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h /opt/ros/humble/include/pcl_conversions/
 cp -rf ../sysroot_docker/usr_x5/share/OpenCV /usr/share/
 cp -rf ../sysroot_docker/usr_x5/lib/libopencv_world* /usr/lib/
 cp -rf ../sysroot_docker/usr_x5/include/opencv2 /usr/include
