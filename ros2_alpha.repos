@@ -22,7 +22,7 @@ repositories:
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
-    version: tros_2.4.0
+    version: tros_2.4.0rc1
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
@@ -34,7 +34,7 @@ repositories:
   box/hobot_perception/mono2d_body_detection:
     type: git
     url: https://github.com/D-Robotics/mono2d_body_detection.git
-    version: tros_2.4.0
+    version: tros_2.4.0rc1
   box/hobot_perception/mot:
     type: git
     url: https://github.com/D-Robotics/mot.git
@@ -42,7 +42,7 @@ repositories:
   box/hobot_perception/hand_lmk_detection:
     type: git
     url: https://github.com/D-Robotics/hand_lmk_detection.git
-    version: tros_2.4.0
+    version: tros_2.4.0rc1
   box/hobot_perception/hand_gesture_detection:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
@@ -82,7 +82,7 @@ repositories:
   box/hobot_perception/hobot_yolo_world:
     type: git
     url: https://github.com/D-Robotics/hobot_yolo_world.git
-    version: tros_0.4.0
+    version: tros_0.4.0rc1
   box/hobot_perception/mono_mobilesam:
     type: git
     url: https://github.com/D-Robotics/mono_mobilesam.git
@@ -90,11 +90,11 @@ repositories:
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
-    version: tros_0.1.0
+    version: tros_0.1.0rc1
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
-    version: tros_0.2.0
+    version: tros_0.2.0rc1
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
