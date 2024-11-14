@@ -86,6 +86,8 @@ cd /mnt/test/cc_ws/tros_ws
 ## Compile using build.sh script, specify the platform to compile for using the -p option [X3|Rdkultra|X86]
 ## For example, to compile TROS for X3 platform, execute the following command
 bash robot_dev_config/build.sh -p X3
+## to compile TROS for X5 platform, execute the following command
+bash robot_dev_config/build.sh -p X5
 ```
 
 **Note: During the compilation process, make sure to export the environment variable in the same terminal before executing the colcon build command.**
