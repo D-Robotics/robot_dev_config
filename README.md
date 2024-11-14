@@ -68,9 +68,9 @@ The entire project directory structure is as follows
 
 ```bash
 ## Get docker for cross compilation
-wget http://archive.d-robotics.cc/tros/cross_compile_docker/pc_tros_v1.0.5.tar.gz
+wget http://sunrise.horizon.cc/TogetheROS/cross_compile_docker/pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## Load docker image
-docker load --input pc_tros_v1.0.5.tar.gz
+docker load --input pc_tros_ubuntu22.04_v1.0.0.tar.gz
 ## Check corresponding image ID
 docker images
 ## Start docker with mounted directories, docker run -it --rm --entrypoint="/bin/bash" -v Local directory in PC:Directory in docker image imageID
