@@ -179,6 +179,14 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_shm.git
     version: develop
+  box/hobot_perception/tros_perception_fusion:
+    type: git
+    url: https://github.com/D-Robotics/tros_perception_fusion
+    version: develop
+  box/hobot_perception/tros_lowpass_filter:
+    type: git
+    url: https://github.com/D-Robotics/tros_lowpass_filter
+    version: develop
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
