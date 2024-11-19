@@ -47,6 +47,14 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
     version: tros_2.4.1
+  box/hobot_perception/face_age_detection:
+    type: git
+    url: https://github.com/D-Robotics/face_age_detection.git
+    version: tros_2.3.1
+  box/hobot_perception/face_landmarks_detection:
+    type: git
+    url: https://github.com/D-Robotics/face_landmarks_detection.git
+    version: tros_2.3.1
   box/hobot_perception/hobot_falldown_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_falldown_detection.git
