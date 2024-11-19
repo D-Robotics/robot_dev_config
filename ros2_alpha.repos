@@ -2,7 +2,7 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.4.0rc2
+    version: tros_2.4.1
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
@@ -18,7 +18,7 @@ repositories:
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.0rc1
+    version: tros_2.3.1
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
@@ -42,11 +42,11 @@ repositories:
   box/hobot_perception/hand_lmk_detection:
     type: git
     url: https://github.com/D-Robotics/hand_lmk_detection.git
-    version: tros_2.4.0rc1
+    version: tros_2.4.1
   box/hobot_perception/hand_gesture_detection:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
-    version: tros_2.4.0rc1
+    version: tros_2.4.1
   box/hobot_perception/hobot_falldown_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_falldown_detection.git
@@ -183,6 +183,14 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_shm.git
     version: tros_0.0.1rc1
+  box/hobot_perception/tros_perception_fusion:
+    type: git
+    url: https://github.com/D-Robotics/tros_perception_fusion
+    version: tros_0.0.1
+  box/hobot_perception/tros_lowpass_filter:
+    type: git
+    url: https://github.com/D-Robotics/tros_lowpass_filter
+    version: tros_0.0.1
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
