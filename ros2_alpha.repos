@@ -130,7 +130,7 @@ repositories:
   box/hobot_vio:
     type: git
     url: https://github.com/D-Robotics/hobot_vio.git
-    version: tros_2.1.0
+    version: tros_2.1.1
   app/hobot_chatbot:
     type: git
     url: https://github.com/D-Robotics/hobot_chatbot.git
