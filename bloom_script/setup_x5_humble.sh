@@ -32,9 +32,6 @@ apt install -y ros-humble-pcl-conversions
 apt install -y tros-humble-ros-workspace
 
 cp -rf /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h /opt/ros/humble/include/pcl_conversions/
-cp -rf ../sysroot_docker/usr_x5/share/OpenCV /usr/share/
-cp -rf ../sysroot_docker/usr_x5/lib/libopencv_world* /usr/lib/
-cp -rf ../sysroot_docker/usr_x5/include/opencv2 /usr/include
 
 cp -rf ../sysroot_docker/usr_x5/lib/aarch64-linux-gnu/libcrypto.so.1.1 /usr/lib/aarch64-linux-gnu/
 

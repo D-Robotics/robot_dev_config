@@ -101,7 +101,7 @@ def main():
         bloom_generate()
         status, stdout, stderr = bloom_build()
         if status:
-            break
+            continue
 
         package_ddeb = None
         result_ddeb = re.search( r"mv .*? ([^']+\.ddeb)", stdout)
