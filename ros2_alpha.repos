@@ -86,7 +86,7 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.1.0
+    version: tros_2.2.0
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils
@@ -130,7 +130,7 @@ repositories:
   box/hobot_slam/orb_slam3:
     type: git
     url: https://github.com/D-Robotics/orb_slam3.git
-    version: tros_2.2.0rc1
+    version: tros_2.3.0
   box/hobot_tts:
     type: git
     url: https://github.com/D-Robotics/hobot_tts.git
@@ -171,6 +171,10 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
     version: tros_2.3.4
+  box/hobot_sensor/hobot_rtsp_client:
+    type: git
+    url: https://github.com/D-Robotics/hobot_rtsp_client.git
+    version: tros_1.0.0
   box/hobot_sensor/hobot_imu_sensor:
     type: git
     url: https://github.com/D-Robotics/hobot_imu_sensor.git
