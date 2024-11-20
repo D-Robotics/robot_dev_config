@@ -163,6 +163,10 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
     version: develop
+  box/hobot_sensor/hobot_rtsp_client:
+    type: git
+    url: https://github.com/D-Robotics/hobot_rtsp_client.git
+    version: develop
   box/hobot_sensor/hobot_imu_sensor:
     type: git
     url: https://github.com/D-Robotics/hobot_imu_sensor.git
