@@ -5,6 +5,7 @@ touch \
     ./src/tools/benchmark/performance_report/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_stereonet/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_stereonet_utils/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
