@@ -1,5 +1,18 @@
 # Changelog for TogetheROS
 
+## v2.3.2 (To be released)
+------------------
+
+功能变更：
+
+新增功能：
+
+问题修复：
+
+- `dnn_node`修复yolov8-seg模型后处理中box越界导致的crash问题。
+- `hobot_codec`修复帧率统计错误的问题。
+
+
 ## v2.3.1 (2024-11-20)
 ------------------
 
