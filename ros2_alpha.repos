@@ -14,11 +14,11 @@ repositories:
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
@@ -26,7 +26,7 @@ repositories:
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_trigger:
     type: git
     url: https://github.com/D-Robotics/hobot_trigger.git
@@ -34,7 +34,7 @@ repositories:
   box/hobot_perception/mono2d_body_detection:
     type: git
     url: https://github.com/D-Robotics/mono2d_body_detection.git
-    version: tros_2.4.1
+    version: tros_2.4.1rc1
   box/hobot_perception/mot:
     type: git
     url: https://github.com/D-Robotics/mot.git
