@@ -9,6 +9,7 @@
 
 - `hobot_stereonet`更新双目模型，深度效果明显提升
 - 新增`hobot_zed_cam` node，可以启动zed相机获取双目图像，并可以配合`hobot_stereonet` node启动双目算法（目前只支持X5芯片）
+- 新增`hobot_rtsp_client` node，增加盒子的的功能，实现拉取RTSP的码流，解码并实现智能推理，并且web显示。
 
 问题修复：
 
@@ -17,6 +18,7 @@
 - `hobot_stereonet_utils`删除部分不能启动的launch文件。
 - `face_age_detection`更新README文档。
 - `face_landmarks_detection`更新README文档。
+- `hobot_mipi_camera`修复多路的i2c detection的问题，增加lpwm开关的配置。
 
 
 ## v2.3.1 (2024-11-20)
