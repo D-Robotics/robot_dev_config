@@ -50,11 +50,11 @@ repositories:
   box/hobot_perception/face_age_detection:
     type: git
     url: https://github.com/D-Robotics/face_age_detection.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_perception/face_landmarks_detection:
     type: git
     url: https://github.com/D-Robotics/face_landmarks_detection.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_perception/hobot_falldown_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_falldown_detection.git
@@ -86,11 +86,15 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.2.0
+    version: tros_2.3.2
   box/hobot_perception/hobot_stereonet_utils:
     type: git
-    url: https://github.com/D-Robotics/hobot_stereonet_utils
-    version: tros_2.3.1
+    url: https://github.com/D-Robotics/hobot_stereonet_utils.git
+    version: tros_2.3.2
+  box/hobot_perception/hobot_zed_cam:
+    type: git
+    url: https://github.com/D-Robotics/hobot_zed_cam.git
+    version: tros_2.3.2
   box/hobot_perception/hobot_yolo_world:
     type: git
     url: https://github.com/D-Robotics/hobot_yolo_world.git
