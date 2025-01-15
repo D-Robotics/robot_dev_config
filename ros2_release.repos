@@ -22,7 +22,7 @@ repositories:
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
-    version: tros_2.4.2
+    version: tros_2.4.2rc1
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
