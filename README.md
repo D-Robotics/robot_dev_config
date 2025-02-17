@@ -88,6 +88,8 @@ cd /mnt/test/cc_ws/tros_ws
 bash robot_dev_config/build.sh -p X3
 ## to compile TROS for X5 platform, execute the following command
 bash robot_dev_config/build.sh -p X5
+## to compile TROS for S100 platform, execute the following command
+bash robot_dev_config/build.sh -p S100
 ```
 
 **Note: During the compilation process, make sure to export the environment variable in the same terminal before executing the colcon build command.**

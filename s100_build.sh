@@ -1,0 +1,23 @@
+#!/bin/bash
+touch \
+    ./src/tools/benchmark/performance_test_ros1_msgs/COLCON_IGNORE \
+    ./src/tools/benchmark/performance_test_ros1_publisher/COLCON_IGNORE \
+    ./src/tools/benchmark/performance_report/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
+    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
+    ./src/box/hobot_dnn/COLCON_IGNORE \
+    ./src/tools/COLCON_IGNORE \
+    ./src/box/hobot_codec/COLCON_IGNORE \
+    ./src/box/hobot_cv/COLCON_IGNORE \
+    ./src/box/hobot_llm/COLCON_IGNORE \
+    ./src/box/hobot_slam/COLCON_IGNORE \
+    ./src/box/hobot_websocket/COLCON_IGNORE \
+    ./src/box/hobot_perception/COLCON_IGNORE \
+    ./src/app/COLCON_IGNORE \
+    ./src/box/hobot_audio/COLCON_IGNORE \
+    ./src/box/hobot_clip/COLCON_IGNORE \
+    ./src/box/hobot_vio/COLCON_IGNORE \
+    ./src/box/hobot_hdmi/COLCON_IGNORE \
