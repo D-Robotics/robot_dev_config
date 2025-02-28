@@ -10,7 +10,7 @@ repositories:
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
-    version: tros_2.0.1
+    version: tros_2.0.1rc1
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
@@ -26,7 +26,7 @@ repositories:
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
-    version: tros_2.3.2
+    version: tros_2.3.3
   box/hobot_trigger:
     type: git
     url: https://github.com/D-Robotics/hobot_trigger.git
