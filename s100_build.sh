@@ -36,4 +36,7 @@ touch \
     ./src/box/hobot_dnn/dnn_node_sample/COLCON_IGNORE \
     ./src/box/hobot_interactions/audio_control/COLCON_IGNORE \
     ./src/box/hobot_interactions/audio_tracking/COLCON_IGNORE \
+    ./src/box/hobot_interactions/body_tracking/COLCON_IGNORE \
+    ./src/box/hobot_interactions/gesture_control/COLCON_IGNORE \
+    ./src/box/hobot_interactions/parking_search/COLCON_IGNORE \
 
