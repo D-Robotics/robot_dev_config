@@ -34,5 +34,5 @@ apt install -y tros-humble-ros-workspace
 
 cp -rf /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h /opt/ros/humble/include/pcl_conversions/
 
-cp -rf ../sysroot_docker/usr_s100/lib/aarch64-linux-gnu/libcrypto.so.1.1 /usr/lib/aarch64-linux-gnu/
+#cp -rf ../sysroot_docker/usr_s100/lib/aarch64-linux-gnu/libcrypto.so.1.1 /usr/lib/aarch64-linux-gnu/
 

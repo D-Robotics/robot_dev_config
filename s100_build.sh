@@ -10,7 +10,22 @@ touch \
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
     ./src/box/hobot_llm/COLCON_IGNORE \
     ./src/box/hobot_slam/COLCON_IGNORE \
-    ./src/box/hobot_perception/COLCON_IGNORE \
+    ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_lmk_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_dosod/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_falldown_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono2d_body_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono2d_trash_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono3d_indoor_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
+    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
+    ./src/box/hobot_perception/tros_lowpass_filter/COLCON_IGNORE \
+    ./src/box/hobot_perception/tros_perception_fusion/COLCON_IGNORE \
     ./src/box/hobot_tts/COLCON_IGNORE \
     ./src/box/hobot_audio/COLCON_IGNORE \
     ./src/box/hobot_clip/COLCON_IGNORE \
