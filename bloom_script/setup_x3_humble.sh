@@ -21,6 +21,7 @@ apt-get install -y libpcap-dev
 cp -rf /usr/include/drm/* /usr/include/
 apt install -y v4l-utils
 apt-get install -y ffmpeg
+apt install git-lfs
 
 apt-get install -y ros-humble-ros-base
 apt-get install -y ros-humble-sim-arm-location-msg
