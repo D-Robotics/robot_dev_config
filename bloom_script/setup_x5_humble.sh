@@ -22,6 +22,7 @@ cp -rf /usr/include/drm/* /usr/include/
 apt install -y v4l-utils
 apt-get install -y ffmpeg
 apt install -y libusb-1.0-0-dev libhidapi-libusb0 libhidapi-dev
+apt install git-lfs
 #apt-get install -y libpcl-dev
 #apt install -y libpcl-conversions-dev
 #apt-get install -y ros-humble-ros-base -b 0.10.0
