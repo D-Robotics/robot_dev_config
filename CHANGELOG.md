@@ -1,6 +1,20 @@
 # Changelog for TogetheROS
 
-## v2.3.2 (To be released)
+## v2.3.3 (2025-4-30)
+------------------
+
+功能变更：
+
+新增功能：
+
+- 支持`RDK X5 Module`平台。
+- 新增基于sensevoice_cpp的[ASR开源方案](https://github.com/D-Robotics/sensevoice_ros2.git)，支持命令词和ASR数据的推送。
+- [双目深度估计算法](https://github.com/D-Robotics/hobot_stereonet)优化后处理耗时，新增V2.3版本模型。
+- 新增基于llama.cpp的端侧[视觉语言模型](https://github.com/D-Robotics/hobot_llamacpp)算法示例。
+
+问题修复：
+
+## v2.3.2 (2025-1-15)
 ------------------
 
 功能变更：
