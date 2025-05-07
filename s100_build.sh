@@ -11,8 +11,8 @@ touch \
     ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_lmk_detection/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
+    ./src/box/hobot_perception/face_age_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/face_landmarks_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_dosod/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_falldown_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
