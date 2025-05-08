@@ -10,7 +10,7 @@ cat <<EOF
 
 Usage: bash -e $0 <options>
 available options:
--p|--platform: set platform ([X3|Rdkultra|X5|X86])
+-p|--platform: set platform ([X3|Rdkultra|X5|X86|S100])
 -s|--selction: add colcon build --packages-select [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
 -h|--help
@@ -25,7 +25,7 @@ fi
 
 PACKAGE_SELECTION=""
 
-PLATFORM_OPTS=(X3 Rdkultra X5 X86)
+PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100)
 BUILD_TESTING_OPTS=(OFF ON)
 GETOPT_ARGS=`getopt -o p:s:g:h -al platform:,selction:,build_testing:,help -- "$@"`
 eval set -- "$GETOPT_ARGS"
@@ -114,6 +114,11 @@ else
     ln -s `pwd`/../sysroot_docker/usr_x5 `pwd`/../sysroot_docker/usr
     # 只编译X5平台的package
     ./robot_dev_config/x5_build.sh
+elif [ $platform == "S100" ]; then
+    echo "build S100"
+    ln -s `pwd`/../sysroot_docker/usr_s100 `pwd`/../sysroot_docker/usr
+    # 只编译S100平台的package
+    ./robot_dev_config/s100_build.sh
   fi
   export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
   #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/

@@ -1,0 +1,38 @@
+#!/bin/bash
+touch \
+    ./src/tools/benchmark/performance_test_ros1_msgs/COLCON_IGNORE \
+    ./src/tools/benchmark/performance_test_ros1_publisher/COLCON_IGNORE \
+    ./src/tools/benchmark/performance_report/COLCON_IGNORE \
+    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
+    ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
+    ./src/box/hobot_llm/COLCON_IGNORE \
+    ./src/box/hobot_slam/COLCON_IGNORE \
+    ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_lmk_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/face_age_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/face_landmarks_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_dosod/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_falldown_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono2d_body_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono2d_trash_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono3d_indoor_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
+    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
+    ./src/box/hobot_perception/tros_lowpass_filter/COLCON_IGNORE \
+    ./src/box/hobot_perception/tros_perception_fusion/COLCON_IGNORE \
+    ./src/box/hobot_audio/COLCON_IGNORE \
+    ./src/box/hobot_clip/COLCON_IGNORE \
+    ./src/app/hobot_chatbot/COLCON_IGNORE \
+    ./src/box/hobot_vio/COLCON_IGNORE \
+    ./src/box/hobot_hdmi/COLCON_IGNORE \
+    ./src/box/hobot_dnn/dnn_benchmark_example/COLCON_IGNORE \
+    ./src/box/hobot_dnn/dnn_node_sample/COLCON_IGNORE \
+    ./src/box/hobot_interactions/audio_tracking/COLCON_IGNORE \
+    ./src/box/hobot_interactions/body_tracking/COLCON_IGNORE \
+    ./src/box/hobot_interactions/gesture_control/COLCON_IGNORE \
+    ./src/box/hobot_interactions/parking_search/COLCON_IGNORE \
+
