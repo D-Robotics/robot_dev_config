@@ -222,7 +222,7 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.5
+    version: tros-humble_v0.0.6
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
