@@ -47,6 +47,14 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
     version: develop
+  box/hobot_perception/face_age_detection:
+    type: git
+    url: https://github.com/D-Robotics/face_age_detection.git
+    version: develop
+  box/hobot_perception/face_landmarks_detection:
+    type: git
+    url: https://github.com/D-Robotics/face_landmarks_detection.git
+    version: develop
   box/hobot_perception/hobot_falldown_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_falldown_detection.git
@@ -82,6 +90,10 @@ repositories:
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils
+    version: develop
+  box/hobot_sensor/hobot_zed_cam:
+    type: git
+    url: https://github.com/D-Robotics/hobot_zed_cam.git
     version: develop
   box/hobot_perception/hobot_yolo_world:
     type: git
@@ -182,10 +194,6 @@ repositories:
   box/hobot_sensor/hobot_stereo_usb_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_stereo_usb_cam.git
-    version: develop
-  box/hobot_sensor/hobot_zed_cam:
-    type: git
-    url: https://github.com/D-Robotics/hobot_zed_cam.git
     version: develop
   box/hobot_llm:
     type: git
