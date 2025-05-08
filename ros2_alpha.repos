@@ -2,7 +2,7 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.4.2
+    version: tros_2.5.0
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
@@ -234,4 +234,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.5
+    version: tros_2.4.6
