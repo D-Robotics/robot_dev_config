@@ -2,14 +2,19 @@
 
 curl -sSL https://archive.d-robotics.cc/keys/sunrise.gpg -o /usr/share/keyrings/sunrise.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/sunrise.gpg] https://archive.d-robotics.cc/ubuntu-rdk-s100-beta/ jammy main" | sudo    tee /etc/apt/sources.list.d/sunrise.list > /dev/null
+echo "deb [trusted=true arch=$(dpkg --print-architecture)] http://sysgbj2.hobot.cc/ubuntu-rdk-s100-beta jammy main" | sudo    tee /etc/apt/sources.list.d/multistrap-d-robotics.list > /dev/null
+
 
 apt-get update
 
 apt install -y libssl-dev
 
 apt-get install -q -y --no-install-recommends \
-    hobot-multimedia-dev hobot-dnn libcjson-dev libasound2-dev python3-pip \
+    hobot-multimedia-dev hobot-multimedia hobot-dnn libcjson-dev libasound2-dev python3-pip \
     libboost-dev libboost-system-dev libboost-serialization-dev hobot-models-basic
+
+echo "/usr/hobot/lib" | sudo tee /etc/ld.so.conf.d/custom.conf
+sudo ldconfig
 
 apt install -y rapidjson-dev
 apt install -y libgflags-dev
@@ -23,6 +28,7 @@ apt install -y v4l-utils
 apt-get install -y ffmpeg
 apt install -y libusb-1.0-0-dev libhidapi-libusb0 libhidapi-dev
 apt install git-lfs
+apt-get install libgoogle-glog-dev
 #apt-get install -y libpcl-dev
 #apt install -y libpcl-conversions-dev
 #apt-get install -y ros-humble-ros-base -b 0.10.0
