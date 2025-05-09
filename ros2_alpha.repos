@@ -2,11 +2,11 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.4.2
+    version: tros_2.5.0
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.1
+    version: tros_2.3.2
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -18,7 +18,7 @@ repositories:
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.2
+    version: tros_2.3.3
   box/hobot_hdmi:
     type: git
     url: https://github.com/D-Robotics/hobot_hdmi.git
@@ -78,11 +78,11 @@ repositories:
   box/hobot_perception/hobot_centerpoint:
     type: git
     url: https://github.com/D-Robotics/hobot_centerpoint.git
-    version: tros_2.0.1rc1
+    version: tros_2.0.2
   box/hobot_perception/hobot_bev:
     type: git
     url: https://github.com/D-Robotics/hobot_bev.git
-    version: tros_2.0.1rc1
+    version: tros_2.0.2
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
@@ -162,7 +162,7 @@ repositories:
   tools/hobot_image_publisher:
     type: git
     url: https://github.com/D-Robotics/hobot_image_publisher.git
-    version: tros_2.2.1
+    version: tros_2.2.2
   tools/hobot_visualization:
     type: git
     url: https://github.com/D-Robotics/hobot_visualization.git
@@ -178,7 +178,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.3.8
+    version: tros_2.3.9
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -222,7 +222,7 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.5
+    version: tros-humble_v0.0.6
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
@@ -234,4 +234,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.5
+    version: tros_2.4.6
