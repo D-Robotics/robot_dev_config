@@ -35,4 +35,5 @@ touch \
     ./src/box/hobot_interactions/body_tracking/COLCON_IGNORE \
     ./src/box/hobot_interactions/gesture_control/COLCON_IGNORE \
     ./src/box/hobot_interactions/parking_search/COLCON_IGNORE \
+    ./src/box/hobot_llamacpp/COLCON_IGNORE \
 

@@ -12,3 +12,4 @@ touch \
     ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_zed_cam/COLCON_IGNORE \
     ./src/box/hobot_clip/COLCON_IGNORE \
+    ./src/box/hobot_llamacpp/COLCON_IGNORE \
