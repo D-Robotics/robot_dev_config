@@ -16,7 +16,6 @@ touch \
     ./src/box/hobot_perception/hobot_dosod/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_falldown_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
-    ./src/box/hobot_perception/mono2d_body_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/mono2d_trash_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/mono3d_indoor_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
