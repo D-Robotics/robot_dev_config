@@ -47,7 +47,7 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
     version: develop
-box/hobot_perception/face_age_detection:
+  box/hobot_perception/face_age_detection:
     type: git
     url: https://github.com/D-Robotics/face_age_detection.git
     version: develop
@@ -91,7 +91,7 @@ box/hobot_perception/face_age_detection:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils
     version: develop
-box/hobot_sensor/hobot_zed_cam:
+  box/hobot_sensor/hobot_zed_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_zed_cam.git
     version: develop
