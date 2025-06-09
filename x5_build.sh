@@ -1,11 +1,82 @@
 #!/bin/bash
-touch \
-    ./src/tools/benchmark/performance_test_ros1_msgs/COLCON_IGNORE \
-    ./src/tools/benchmark/performance_test_ros1_publisher/COLCON_IGNORE \
-    ./src/tools/benchmark/performance_report/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
-    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE \
-    ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
-    ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
-    ./src/box/hobot_llamacpp/COLCON_IGNORE \
+
+COLCON_IGNORE_LIST=(
+    ./src/tools/benchmark/performance_test_ros1_msgs/COLCON_IGNORE
+    ./src/tools/benchmark/performance_test_ros1_publisher/COLCON_IGNORE
+    ./src/tools/benchmark/performance_report/COLCON_IGNORE
+    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE
+    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE
+    ./src/box/hobot_perception/parking_perception/COLCON_IGNORE
+    ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE
+    ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE
+    ./src/box/hobot_llamacpp/COLCON_IGNORE
+)
+
+pre_function() {
+    echo "Running pre_function"
+    
+    # ros部分package的cmake中硬编码头文件在/usr/include中
+    SYSROOT_DIR="`pwd`/../sysroot_docker/usr"
+    TARGET_DIR="/usr"
+    SYMLINKS_FILE="/tmp/sysroot_temp_symlinks.txt"
+    >"$SYMLINKS_FILE"
+    LINK_DIRS=(include/pcl-1.12
+               include/eigen3
+               include/ni
+               include/openni2
+               include/uuid
+               lib/aarch64-linux-gnu/libpcl_common.so
+               lib/libOpenNI.so
+               lib/aarch64-linux-gnu/libOpenNI2.so)
+
+    echo "Creating symlinks..."
+    for dir in "${LINK_DIRS[@]}"; do
+      src="${SYSROOT_DIR}/${dir}"
+      dst="${TARGET_DIR}/${dir}"
+
+      if [ -e "$src" ] && [ ! -e "$dst" ]; then
+        ln -s "$src" "$dst"
+        echo "$dst" >>"$SYMLINKS_FILE"
+        echo "  Linked $dst -> $src"
+      fi
+    done
+
+    for file in "${COLCON_IGNORE_LIST[@]}"; do
+        touch "$file"
+    done
+}
+
+post_function() {
+    echo "Running post_function"
+    if [[ "$platform" == "X5" ]] && [[ -f "/tmp/sysroot_temp_symlinks.txt" ]]; then
+      while read -r path; do
+        if [ -L "$path" ]; then
+          rm "$path"
+        fi
+      done < "/tmp/sysroot_temp_symlinks.txt"
+      rm /tmp/sysroot_temp_symlinks.txt
+    fi
+
+    for file in "${COLCON_IGNORE_LIST[@]}"; do
+        if [ -f "$file" ]; then
+            rm "$file"
+        fi
+    done
+}
+
+main() {
+    case "$1" in
+        pre)
+            pre_function
+            ;;
+        post)
+            post_function
+            ;;
+        *)
+            echo "用法: $0 [pre|post]"
+            exit 1
+            ;;
+    esac
+}
+
+main "$1"
