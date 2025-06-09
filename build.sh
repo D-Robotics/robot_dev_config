@@ -113,8 +113,8 @@ else
     echo "build X5"
     ln -s `pwd`/../sysroot_docker/usr_x5 `pwd`/../sysroot_docker/usr
     # 只编译X5平台的package
-    ./robot_dev_config/x5_build.sh
-elif [ $platform == "S100" ]; then
+    ./robot_dev_config/x5_build.sh pre
+  elif [ $platform == "S100" ]; then
     echo "build S100"
     ln -s `pwd`/../sysroot_docker/usr_s100 `pwd`/../sysroot_docker/usr
     # 只编译S100平台的package
@@ -253,7 +253,10 @@ elif [ $platform == "S100" ]; then
             -DTHIRDPARTY=ON \
             -DBUILD_TESTING=$build_testing \
             -DCMAKE_BUILD_RPATH="`pwd`/build/poco_vendor/poco_external_project_install/lib/;`pwd`/build/libyaml_vendor/libyaml_install/lib/"
-
+    
+    if [[ "$platform" == "X5" ]]; then
+      ./robot_dev_config/x5_build.sh post
+    fi
   fi
 
 fi
