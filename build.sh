@@ -9,11 +9,18 @@ function show_usage() {
 cat <<EOF
 
 Usage: bash -e $0 <options>
-available options:
+
+Available options:
 -p|--platform: set platform ([X3|Rdkultra|X5|X86|S100])
 -s|--selction: add colcon build --packages-select [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
+-r|--raw_options: add raw colcon build options, e.g. "-r '--packages-up-to [PKG_NAME ...]'"
 -h|--help
+
+The priority of options for compilation is:
+1. selection
+2. raw_options
+
 EOF
 exit
 }
@@ -24,10 +31,11 @@ if [ $# -lt 1 ];then
 fi
 
 PACKAGE_SELECTION=""
+RAW_OPTIONS=""
 
 PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100)
 BUILD_TESTING_OPTS=(OFF ON)
-GETOPT_ARGS=`getopt -o p:s:g:h -al platform:,selction:,build_testing:,help -- "$@"`
+GETOPT_ARGS=`getopt -o p:s:g:r:h -al platform:,selction:,build_testing:,help -- "$@"`
 eval set -- "$GETOPT_ARGS"
 
 while [ -n "$1" ]
@@ -55,11 +63,22 @@ do
         show_usage
       fi
       ;;
+    -r|--raw_options)
+      RAW_OPTIONS=$2
+      shift 2
+      echo "RAW_OPTIONS: $RAW_OPTIONS"
+      ;;
     -h|--help) show_usage; break;;
     --) break ;;
     *) echo $1,$2 show_usage; break;;
   esac
 done
+
+if [ -z "${PACKAGE_SELECTION}" ]; then
+  echo "PACKAGE_SELECTION is empty and reset with RAW_OPTIONS [$RAW_OPTIONS]"
+  PACKAGE_SELECTION=$RAW_OPTIONS
+fi
+echo "PACKAGE_SELECTION: $PACKAGE_SELECTION"
 
 rm `pwd`/../sysroot_docker/usr
 
