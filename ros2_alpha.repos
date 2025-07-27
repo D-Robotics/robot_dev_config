@@ -91,6 +91,10 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils.git
     version: tros_2.3.2
+  box/hobot_perception/dstereo_occnet:
+    type: git
+    url: https://github.com/D-Robotics/dstereo_occnet
+    version: tros_1.0.0
   box/hobot_sensor/hobot_zed_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_zed_cam.git
