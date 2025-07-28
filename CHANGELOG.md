@@ -1,4 +1,19 @@
 # Changelog for TogetheROS
+
+## v2.4.1 (2025-7-28)
+------------------
+
+功能变更：
+
+新增功能：
+
+- `edgesam`, 新增edgesam作为模型推理, 新增对分割结果padding, 用于在双目深度案例一同可视化。
+- `reid`, 新增人体特征提取能力, 新增SQlite数据库对 reid 提取的特征进行存储、管理、查询的能力。
+- `dstereo_occnet`, 发布地瓜双目OCC网络，版本号tros_1.0.0
+- `hobot_llamacpp`, 适配smolvlm算法。
+
+问题修复:
+
 ## v2.4.0 (2025-6-18)
 ------------------
 

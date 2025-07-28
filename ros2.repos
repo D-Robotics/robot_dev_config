@@ -107,9 +107,21 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/mono_mobilesam.git
     version: develop
+  box/hobot_perception/mono_edgesam:
+    type: git
+    url: https://github.com/D-Robotics/mono_edgesam.git
+    version: develop
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
+    version: develop
+  box/hobot_perception/dstereo_occnet:
+    type: git
+    url: https://github.com/D-Robotics/dstereo_occnet.git
+    version: develop
+  box/hobot_perception/reid:
+    type: git
+    url: https://github.com/D-Robotics/reid.git
     version: develop
   box/hobot_clip:
     type: git
