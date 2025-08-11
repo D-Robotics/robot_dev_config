@@ -7,6 +7,7 @@
 
 新增功能：
 
+- `MIPI图像采集`支持imx415模组。
 - `edgesam`, 新增edgesam作为模型推理, 新增对分割结果padding, 用于在双目深度案例一同可视化。
 - `reid`, 新增人体特征提取能力, 新增SQlite数据库对 reid 提取的特征进行存储、管理、查询的能力。
 - `dstereo_occnet`, 发布地瓜双目OCC网络，版本号tros_1.0.0
