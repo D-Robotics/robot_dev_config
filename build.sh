@@ -84,7 +84,7 @@ rm `pwd`/../sysroot_docker/usr
 
 export ROS_VERSION=2
 ## 清除配置选项
-./robot_dev_config/clear_COLCON_IGNORE.sh
+# ./robot_dev_config/clear_COLCON_IGNORE.sh
 if [ $build_testing == "ON" ]; then
   echo "open build gtest"
   rm ./src/tros/performance_test_fixture/COLCON_IGNORE
