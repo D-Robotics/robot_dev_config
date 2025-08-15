@@ -86,7 +86,7 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.4.2
+    version: tros_2.4.4
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils.git
