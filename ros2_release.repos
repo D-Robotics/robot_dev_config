@@ -2,7 +2,7 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.5.1
+    version: tros_2.5.5
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
@@ -86,7 +86,7 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.4.2
+    version: tros_2.4.4
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils.git
@@ -94,7 +94,7 @@ repositories:
   box/hobot_perception/dstereo_occnet:
     type: git
     url: https://github.com/D-Robotics/dstereo_occnet
-    version: tros_1.0.0
+    version: tros_1.0.1
   box/hobot_sensor/hobot_zed_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_zed_cam.git
@@ -106,7 +106,7 @@ repositories:
   box/hobot_perception/hobot_dosod:
     type: git
     url: https://github.com/D-Robotics/hobot_dosod.git
-    version: tros_0.1.0
+    version: tros_1.0.0
   box/hobot_perception/mono_mobilesam:
     type: git
     url: https://github.com/D-Robotics/mono_mobilesam.git
@@ -114,7 +114,7 @@ repositories:
   box/hobot_perception/mono_edgesam:
     type: git
     url: https://github.com/D-Robotics/mono_edgesam.git
-    version: tros_0.1.3
+    version: tros_0.2.0
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
@@ -126,7 +126,7 @@ repositories:
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
-    version: tros_0.2.0
+    version: tros_0.3.0
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
@@ -190,7 +190,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.3.10
+    version: tros_2.3.11
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -230,15 +230,15 @@ repositories:
   box/hobot_llamacpp:
     type: git
     url: https://github.com/D-Robotics/hobot_llamacpp.git
-    version: tros_0.3.0
+    version: tros_0.4.0
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.7
+    version: tros-humble_v0.0.8
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
-    version: tros-humble_v0.0.7
+    version: tros-humble_v0.0.8
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
@@ -246,4 +246,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.6
+    version: tros_2.4.8
