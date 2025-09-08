@@ -10,6 +10,23 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE
     ./src/box/hobot_llamacpp/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_odom/COLCON_IGNORE
+)
+
+LINK_DIRS=(
+    include/pcl-1.12
+    include/eigen3
+    include/ni
+    include/openni2
+    include/uuid
+    include/aarch64-linux-gnu/qt5
+    include/opencv4
+    lib/libOpenNI.so
+    lib/aarch64-linux-gnu/libpcl_common.so
+    lib/aarch64-linux-gnu/libOpenNI2.so
+    lib/aarch64-linux-gnu/libblas.so
+    lib/aarch64-linux-gnu/liblapack.so
+    lib/aarch64-linux-gnu/libyaml-cpp.so.0.7.0
 )
 
 pre_function() {
@@ -20,14 +37,6 @@ pre_function() {
     TARGET_DIR="/usr"
     SYMLINKS_FILE="/tmp/sysroot_temp_symlinks.txt"
     >"$SYMLINKS_FILE"
-    LINK_DIRS=(include/pcl-1.12
-               include/eigen3
-               include/ni
-               include/openni2
-               include/uuid
-               lib/aarch64-linux-gnu/libpcl_common.so
-               lib/libOpenNI.so
-               lib/aarch64-linux-gnu/libOpenNI2.so)
 
     echo "Creating symlinks..."
     for dir in "${LINK_DIRS[@]}"; do
@@ -35,6 +44,7 @@ pre_function() {
       dst="${TARGET_DIR}/${dir}"
 
       if [ -e "$src" ] && [ ! -e "$dst" ]; then
+        mkdir -p "$(dirname "$dst")"  # 确保目标父目录存在
         ln -s "$src" "$dst"
         echo "$dst" >>"$SYMLINKS_FILE"
         echo "  Linked $dst -> $src"
