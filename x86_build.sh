@@ -9,7 +9,6 @@ touch \
     ./src/eProsima/compatibility/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_mipi_cam/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
-    ./src/box/hobot_hdmi/COLCON_IGNORE \
     ./src/box/hobot_audio/COLCON_IGNORE \
     ./src/box/hobot_interactions/COLCON_IGNORE \
     ./src/box/hobot_slam/COLCON_IGNORE \

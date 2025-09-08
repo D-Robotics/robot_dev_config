@@ -19,10 +19,6 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
     version: develop
-  box/hobot_hdmi:
-    type: git
-    url: https://github.com/D-Robotics/hobot_hdmi.git
-    version: develop
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git

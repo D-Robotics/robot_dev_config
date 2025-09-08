@@ -19,7 +19,6 @@ touch \
     ./src/box/hobot_perception/dstereo_occnet/COLCON_IGNORE \
     ./src/box/hobot_clip/COLCON_IGNORE \
     ./src/box/hobot_dnn/dnn_node_sample/COLCON_IGNORE \
-    ./src/box/hobot_hdmi/COLCON_IGNORE \
     ./src/box/hobot_tts/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_imu_sensor/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
