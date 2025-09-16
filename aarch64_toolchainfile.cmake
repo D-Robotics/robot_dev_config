@@ -21,6 +21,8 @@ set(Qt5Widgets_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch6
 set(Qt5Gui_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui)
 set(Qt5Test_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/cmake/Qt5Test)
 set(Qt5Concurrent_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/cmake/Qt5Concurrent)
+set(X11_Xrandr_LIB ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXrandr.so.2)
+set(X11_Xaw_LIB    ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXaw.so)
 set(BUILD_TESTING off)
 set(BUILD_HBMEM ON)
 set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
