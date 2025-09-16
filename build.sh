@@ -265,7 +265,6 @@ else
     colcon build $PACKAGE_SELECTION \
           --merge-install \
           --cmake-force-configure \
-          --parallel-workers 2 \
           --cmake-args \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             --no-warn-unused-cli \

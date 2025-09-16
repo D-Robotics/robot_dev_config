@@ -10,7 +10,6 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE
     ./src/box/hobot_llamacpp/COLCON_IGNORE
-    ./src/rtabmap_ros/rtabmap_odom/COLCON_IGNORE
 )
 
 LINK_DIRS=(
