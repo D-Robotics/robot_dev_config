@@ -40,6 +40,9 @@ touch \
     ./src/ros/ros_tutorials/COLCON_IGNORE \
     ./src/tros/ros1_bridge/COLCON_IGNORE \
     ./src/box/hobot_llamacpp/COLCON_IGNORE \
+    ./src/box/hobot_xlm/COLCON_IGNORE \
+    ./src/box/hobot_perception/palm_detection_mediapipe/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_landmarks_mediapipe/COLCON_IGNORE \
     ./src/eProsima/compatibility/COLCON_IGNORE
 
     
