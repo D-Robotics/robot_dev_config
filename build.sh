@@ -272,12 +272,14 @@ else
           --merge-install \
           --cmake-force-configure \
           --cmake-args \
+            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             --no-warn-unused-cli \
             -DCMAKE_TOOLCHAIN_FILE=`pwd`/robot_dev_config/aarch64_toolchainfile.cmake \
             -DPLATFORM_${platform}=ON \
             -DTHIRDPARTY=ON \
             -DBUILD_TESTING=$build_testing \
-            -DCMAKE_BUILD_RPATH="`pwd`/build/poco_vendor/poco_external_project_install/lib/;`pwd`/build/libyaml_vendor/libyaml_install/lib/"
+            -DCMAKE_BUILD_RPATH="`pwd`/build/poco_vendor/poco_external_project_install/lib/;`pwd`/build/libyaml_vendor/libyaml_install/lib/" \
+    || echo -e "\033[1;31m[ERROR]\033[0m colcon build failed"
     
     if [[ "$platform" == "X5" ]]; then
       ./robot_dev_config/x5_build.sh post
