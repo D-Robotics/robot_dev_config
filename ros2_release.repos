@@ -186,7 +186,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.3.11
+    version: tros_2.3.13
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -230,7 +230,7 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.8
+    version: tros-humble_v0.0.9
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
