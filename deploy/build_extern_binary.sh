@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]] ; then
-    echo 'Please specify package name as argument (tros_hobot_audio, tros_performance_test, or tros_orb_slam3)'
+    echo 'Please specify package name as argument (tros_hobot_audio, tros_performance_test)'
     exit 1
 fi
 
@@ -14,11 +14,8 @@ case $package_name in
     "tros_performance_test")
         install_dir="install_performance_test"
         ;;
-    "tros_orb_slam3")
-        install_dir="install_orb-slam3"
-        ;;
     *)
-        echo "Invalid package name. Please specify one of the following: tros_hobot_audio, tros_performance_test, tros_orb_slam3"
+        echo "Invalid package name. Please specify one of the following: tros_hobot_audio, tros_performance_test"
         exit 1
         ;;
 esac

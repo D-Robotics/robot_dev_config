@@ -7,7 +7,6 @@ touch \
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE \
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE \
     ./src/box/hobot_llm/COLCON_IGNORE \
-    ./src/box/hobot_slam/COLCON_IGNORE \
     ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_lmk_detection/COLCON_IGNORE \

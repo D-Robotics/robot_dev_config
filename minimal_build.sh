@@ -17,7 +17,6 @@ touch \
     ./src/box/hobot_codec/COLCON_IGNORE \
     ./src/box/hobot_hdmi/COLCON_IGNORE \
     ./src/box/hobot_cv/COLCON_IGNORE \
-    ./src/box/hobot_slam/COLCON_IGNORE \
     ./src/app/COLCON_IGNORE \
     ./src/box/ros-tracing/ros2_tracing/ros2trace/COLCON_IGNORE \
     ./src/box/ros-tracing/ros2_tracing/tracetools_launch/COLCON_IGNORE \
