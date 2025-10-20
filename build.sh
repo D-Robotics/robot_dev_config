@@ -3,6 +3,7 @@
 #*******************
 platform=X3
 build_testing=OFF
+ros_distro=humble
 #*******************
 
 function show_usage() {
@@ -15,6 +16,7 @@ Available options:
 -s|--selction: add colcon build --packages-select [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
 -r|--raw_options: add raw colcon build options, e.g. "-r '--packages-up-to [PKG_NAME ...]'"
+-o|--ros_distro: set ros os ([humble|jazzy])
 -h|--help
 
 The priority of options for compilation is:
@@ -34,8 +36,9 @@ PACKAGE_SELECTION=""
 RAW_OPTIONS=""
 
 PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100)
+ROS_DISTRO_OPTS=(humble jazzy)
 BUILD_TESTING_OPTS=(OFF ON)
-GETOPT_ARGS=`getopt -o p:s:g:r:h -al platform:,selction:,build_testing:,help -- "$@"`
+GETOPT_ARGS=`getopt -o p:s:g:r:o:h -al platform:,selction:,build_testing:,help -- "$@"`
 eval set -- "$GETOPT_ARGS"
 
 while [ -n "$1" ]
@@ -67,6 +70,14 @@ do
       RAW_OPTIONS=$2
       shift 2
       echo "RAW_OPTIONS: $RAW_OPTIONS"
+      ;;
+    -o|--ros_distro)
+      ros_distro=$2
+      shift 2
+      if [[ ! "${ROS_DISTRO_OPTS[@]}" =~ $ros_distro ]] ; then
+        echo "invalid platform: $ros_distro"
+        show_usage
+      fi
       ;;
     -h|--help) show_usage; break;;
     --) break ;;
@@ -123,7 +134,7 @@ else
   export TARGET_ARCH=aarch64
   export TARGET_TRIPLE=aarch64-linux-gnu
   export CROSS_COMPILE=/usr/bin/$TARGET_TRIPLE-
-  source /opt/ros/humble/setup.bash
+  source /opt/ros/$ros_distro/setup.bash
   if [ $platform == "X3" ]; then
     echo "build X3"
     ln -s `pwd`/../sysroot_docker/usr_x3 `pwd`/../sysroot_docker/usr

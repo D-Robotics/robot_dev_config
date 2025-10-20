@@ -7,8 +7,12 @@ set(CMAKE_SYSTEM_PROCESSOR aarch64)
 # specify the cross compiler
 set(CMAKE_C_COMPILER $ENV{CROSS_COMPILE}gcc)
 set(CMAKE_CXX_COMPILER $ENV{CROSS_COMPILE}g++)
+set(ROS_DISTRO humble)
+if(DEFINED ENV{ROS_DISTRO})
+    set(ROS_DISTRO $ENV{ROS_DISTRO})
+endif()
 # where is the target environment
-set(CMAKE_FIND_ROOT_PATH ${CMAKE_CURRENT_LIST_DIR}/../install ${CMAKE_CURRENT_LIST_DIR}/../build /opt/ros/humble ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker)
+set(CMAKE_FIND_ROOT_PATH ${CMAKE_CURRENT_LIST_DIR}/../install ${CMAKE_CURRENT_LIST_DIR}/../build /opt/ros/${ROS_DISTRO} ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker)
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
@@ -25,9 +29,12 @@ set(X11_Xrandr_LIB ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch6
 set(X11_Xaw_LIB    ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXaw.so)
 set(BUILD_TESTING off)
 set(BUILD_HBMEM ON)
-set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/opt/ros/humble/lib/aarch64-linux-gnu")
-
+if("${ROS_DISTRO}" STREQUAL "humble")
+    set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
+elseif("${ROS_DISTRO}" STREQUAL "jazzy")
+    set(PYTHON_SOABI cpython-312-aarch64-linux-gnu)
+endif()
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/opt/ros/${ROS_DISTRO}/lib/aarch64-linux-gnu")
 # This assumes that pthread will be available on the target system
 # (this emulates that the return of the TRY_RUN is a return code "0"
 set(THREADS_PTHREAD_ARG "0"
