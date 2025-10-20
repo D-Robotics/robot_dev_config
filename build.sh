@@ -12,7 +12,7 @@ cat <<EOF
 Usage: bash -e $0 <options>
 
 Available options:
--p|--platform: set platform ([X3|Rdkultra|X5|X86|S100])
+-p|--platform: set platform ([X3|Rdkultra|X5|X86|S100|S600])
 -s|--selction: add colcon build --packages-select [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
 -r|--raw_options: add raw colcon build options, e.g. "-r '--packages-up-to [PKG_NAME ...]'"
@@ -35,7 +35,7 @@ fi
 PACKAGE_SELECTION=""
 RAW_OPTIONS=""
 
-PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100)
+PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100 S600)
 ROS_DISTRO_OPTS=(humble jazzy)
 BUILD_TESTING_OPTS=(OFF ON)
 GETOPT_ARGS=`getopt -o p:s:g:r:o:h -al platform:,selction:,build_testing:,help -- "$@"`
@@ -155,6 +155,11 @@ else
     ln -s `pwd`/../sysroot_docker/usr_s100 `pwd`/../sysroot_docker/usr
     # 只编译S100平台的package
     ./robot_dev_config/s100_build.sh
+  elif [ $platform == "S600" ]; then
+    echo "build S600"
+    ln -s `pwd`/../sysroot_docker/usr_s600 `pwd`/../sysroot_docker/usr
+    # 只编译S100平台的package
+    ./robot_dev_config/s600_build.sh
   fi
   export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
   #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/
