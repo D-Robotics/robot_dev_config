@@ -18,7 +18,7 @@ repositories:
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.3
+    version: tros_2.3.4
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
