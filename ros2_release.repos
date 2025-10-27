@@ -2,11 +2,11 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.5.5
+    version: tros_2.5.7
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.2
+    version: tros_2.3.3
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -118,6 +118,18 @@ repositories:
   box/hobot_perception/reid:
     type: git
     url: https://github.com/D-Robotics/reid.git
+    version: tros_0.2.0
+  box/hobot_perception/palm_detection_mediapipe:
+    type: git
+    url: https://github.com/D-Robotics/palm_detection_mediapipe.git
+    version: tros_1.0.0
+  box/hobot_perception/hand_landmarks_mediapipe:
+    type: git
+    url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
+    version: tros_1.0.0
+  box/hobot_xlm:
+    type: git
+    url: https://github.com/D-Robotics/hobot_xlm.git
     version: tros_0.1.0
   box/hobot_clip:
     type: git
@@ -242,4 +254,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.8
+    version: tros_2.4.9
