@@ -38,15 +38,3 @@ touch \
     ./src/box/hobot_interactions/gesture_control/COLCON_IGNORE \
     ./src/box/hobot_interactions/parking_search/COLCON_IGNORE \
     ./src/box/hobot_llamacpp/COLCON_IGNORE \
-    ./src/box/hobot_dnn/COLCON_IGNORE \
-    ./src/box/hobot_trigger/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_bev/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_stereonet_utils/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_stereonet/COLCON_IGNORE \
-    ./src/box/hobot_sensor/hobot_zed_cam/COLCON_IGNORE \
-    ./src/box/hobot_perception/hobot_centerpoint/COLCON_IGNORE \
-    ./src/box/hobot_perception/mono2d_body_detection/COLCON_IGNORE \
-    ./src/tools/benchmark/performance_test/COLCON_IGNORE \
-    ./src/box/hobot_sensor/hobot_usb_cam/COLCON_IGNORE \
-    ./src/tools/COLCON_IGNORE \
-    
