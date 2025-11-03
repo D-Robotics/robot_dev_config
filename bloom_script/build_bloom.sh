@@ -5,7 +5,7 @@
 platform=X3
 build_testing=OFF
 export DEB_BUILD_OPTIONS="nocheck"
-export ROS_DISTRO="humble"
+ROS_DISTRO="humble"
 #*******************
 
 function show_usage() {
@@ -13,9 +13,10 @@ cat <<EOF
 
 Usage: bash -e $0 <options>
 available options:
--p|--platform: set platform ([X3|Rdkultra|X5|S100])
+-p|--platform: set platform ([X3|Rdkultra|X5|S100|S600])
 -s|--selction: add bloom build  [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
+-o|--ros_distro: set ros os ([humble|jazzy])
 -h|--help
 EOF
 exit
@@ -28,9 +29,10 @@ fi
 
 PACKAGE_SELECTION=""
 
-PLATFORM_OPTS=(X3 Rdkultra X5 S100)
+PLATFORM_OPTS=(X3 Rdkultra X5 S100 S600)
+ROS_DISTRO_OPTS=(humble jazzy)
 BUILD_TESTING_OPTS=(OFF ON)
-GETOPT_ARGS=`getopt -o p:s:g:h -al platform:,selction:,build_testing:,help -- "$@"`
+GETOPT_ARGS=`getopt -o p:s:g:o:h -al platform:,selction:,build_testing:,help -- "$@"`
 eval set -- "$GETOPT_ARGS"
 
 while [ -n "$1" ]
@@ -58,12 +60,20 @@ do
         show_usage
       fi
       ;;
+    -o|--ros_distro)
+      ROS_DISTRO=$2
+      shift 2
+      if [[ ! "${ROS_DISTRO_OPTS[@]}" =~ $ROS_DISTRO ]] ; then
+        echo "invalid platform: $ROS_DISTRO"
+        show_usage
+      fi
+      ;;
     -h|--help) show_usage; break;;
     --) break ;;
     *) echo $1,$2 show_usage; break;;
   esac
 done
-./robot_dev_config/clear_COLCON_IGNORE.sh
+#./robot_dev_config/clear_COLCON_IGNORE.sh
 if [ $platform == "X3" ]; then
     echo "build X3"
     export PLATFORM="X3"
@@ -82,6 +92,10 @@ elif [ $platform == "S100" ]; then
     echo "build S100"
     export PLATFORM="S100"
     ./robot_dev_config/s100_build.sh
+elif [ $platform == "S600" ]; then
+    echo "build S600"
+    export PLATFORM="S600"
+    ./robot_dev_config/s600_build.sh
 fi
 
 CURRENT_PATH=`pwd`/
@@ -97,8 +111,13 @@ sed -i "${line_number}s#.*#DEFAULT_SOURCES_LIST_URL = 'file:${CURRENT_PATH}/src/
 line_number=$(grep -n "^DEFAULT_INDEX_URL = " /usr/lib/python3/dist-packages/rosdistro/__init__.py | cut -d: -f1)
 sed -i "${line_number}s#.*#DEFAULT_INDEX_URL = 'file:${CURRENT_PATH}/src/ros/rosdistro/index-v4.yaml'#g" /usr/lib/python3/dist-packages/rosdistro/__init__.py
 
-line_number=$(grep -n "^DEFAULT_INDEX_URL = " /usr/local/lib/python3.10/dist-packages/rosdistro-0.9.0-py3.10.egg/rosdistro/__init__.py | cut -d: -f1)
-sed -i "${line_number}s#.*#DEFAULT_INDEX_URL = 'file:${CURRENT_PATH}/src/ros/rosdistro/index-v4.yaml'#g" /usr/local/lib/python3.10/dist-packages/rosdistro-0.9.0-py3.10.egg/rosdistro/__init__.py
+if [ $ROS_DISTRO == "humble" ]; then
+  line_number=$(grep -n "^DEFAULT_INDEX_URL = " /usr/local/lib/python3.10/dist-packages/rosdistro-0.9.0-py3.10.egg/rosdistro/__init__.py | cut -d: -f1)
+  sed -i "${line_number}s#.*#DEFAULT_INDEX_URL = 'file:${CURRENT_PATH}/src/ros/rosdistro/index-v4.yaml'#g" /usr/local/lib/python3.10/dist-packages/rosdistro-0.9.0-py3.10.egg/rosdistro/__init__.py
+elif [ $ROS_DISTRO == "jazzy" ]; then
+  line_number=$(grep -n "^DEFAULT_INDEX_URL = " /usr/local/lib/python3.12/dist-packages/rosdistro-1.0.1-py3.12.egg/rosdistro/__init__.py | cut -d: -f1)
+  sed -i "${line_number}s#.*#DEFAULT_INDEX_URL = 'file:${CURRENT_PATH}/src/ros/rosdistro/index-v4.yaml'#g" /usr/local/lib/python3.12/dist-packages/rosdistro-1.0.1-py3.12.egg/rosdistro/__init__.py
+fi
 
 echo "yaml file:${CURRENT_PATH}/src/ros/rosdistro/rosdep/osx-homebrew.yaml osx" > /etc/ros/rosdep/sources.list.d/20-default.list
 echo "yaml file:${CURRENT_PATH}/src/ros/rosdistro/rosdep/base.yaml" >> /etc/ros/rosdep/sources.list.d/20-default.list
@@ -106,13 +125,13 @@ echo "yaml file:${CURRENT_PATH}/src/ros/rosdistro/rosdep/python.yaml" >> /etc/ro
 echo "yaml file:${CURRENT_PATH}/src/ros/rosdistro/rosdep/ruby.yaml" >> /etc/ros/rosdep/sources.list.d/20-default.list
 echo "gbpdistro file:${CURRENT_PATH}/src/ros/rosdistro/releases/fuerte.yaml fuerte" >> /etc/ros/rosdep/sources.list.d/20-default.list
 
-echo "yaml file:${CURRENT_PATH}/src/tros/trosdep/humble/trosdep.yaml" > /etc/ros/rosdep/sources.list.d/20-tros.list
+echo "yaml file:${CURRENT_PATH}/src/tros/trosdep/${ROS_DISTRO}/trosdep.yaml" > /etc/ros/rosdep/sources.list.d/20-tros.list
 
 rosdep update --rosdistro ${ROS_DISTRO}
 
 rosdep install --from-paths ./src --ignore-src -y --rosdistro ${ROS_DISTRO}
 
-python3 ./robot_dev_config/bloom_script/packages_build.py ./src ${selction}
-python3 ./robot_dev_config/bloom_script/packages_build.py ./tros_arm_build/packages ${selction}
+python3 ./robot_dev_config/bloom_script/packages_build.py ${ROS_DISTRO} ./src ${selction}
+python3 ./robot_dev_config/bloom_script/packages_build.py ${ROS_DISTRO} ./tros_arm_build/packages ${selction}
 
 

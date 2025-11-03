@@ -7,7 +7,7 @@ import time
 
 from packages_sort import find_packages_sorted
 
-ROSDISTRO="humble"
+ROSDISTRO="jazzy"
 
 def process_bash_command(bash_command, time_out=None):
     process = subprocess.Popen(
@@ -57,11 +57,13 @@ def trosdep_delete(package_name):
 from catkin_pkg.topological_order import topological_order
 
 def main():
-    src_path = sys.argv[1]
+    ROSDISTRO = sys.argv[1]
+    src_path = sys.argv[2]
+    print("ROSDISTRO :", ROSDISTRO)
     num_args = len(sys.argv) - 1
     select_flase = False
-    if (num_args == 2):
-        select_package = sys.argv[2]
+    if (num_args == 3):
+        select_package = sys.argv[3]
         select_flase = True
         print(select_package)
     # rosdep_update()
