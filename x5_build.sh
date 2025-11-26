@@ -44,6 +44,9 @@ LINK_DIRS=(
     lib/aarch64-linux-gnu/librt.a
     lib/aarch64-linux-gnu/libtinyxml.so
     lib/aarch64-linux-gnu/libtinyxml.so.2.6.2
+    lib/x86_64-linux-gnu/libQt5Core.so.5
+    lib/x86_64-linux-gnu/libdouble-conversion.so.3
+    lib/x86_64-linux-gnu/libpcre2-16.so.0
 )
 
 pre_function() {
