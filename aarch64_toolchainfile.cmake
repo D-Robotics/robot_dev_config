@@ -22,11 +22,11 @@ set(Qt5Gui_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-li
 set(Qt5Test_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/cmake/Qt5Test)
 set(Qt5Concurrent_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/cmake/Qt5Concurrent)
 set(X11_Xrandr_LIB ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXrandr.so.2)
-set(X11_Xaw_LIB    ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXaw.so)
+set(X11_Xaw_LIB ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libXaw.so)
 set(BUILD_TESTING off)
 set(BUILD_HBMEM ON)
 set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/opt/ros/humble/lib/aarch64-linux-gnu")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/opt/ros/humble/lib/aarch64-linux-gnu -Wl,-rpath-link=/opt/ros/humble/lib/")
 
 # This assumes that pthread will be available on the target system
 # (this emulates that the return of the TRY_RUN is a return code "0"
