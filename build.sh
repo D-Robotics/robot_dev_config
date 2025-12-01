@@ -14,6 +14,7 @@ Available options:
 -p|--platform: set platform ([X3|Rdkultra|X5|X86|S100])
 -s|--selction: add colcon build --packages-select [PKG_NAME]
 -g|--build_testing: compile gtest cases, default value is OFF ([ON|OFF])
+-c|--cmake-args: add cmake-args
 -r|--raw_options: add raw colcon build options, e.g. "-r '--packages-up-to [PKG_NAME ...]'"
 -h|--help
 
@@ -32,10 +33,11 @@ fi
 
 PACKAGE_SELECTION=""
 RAW_OPTIONS=""
+CMAKE_ARGS=""
 
 PLATFORM_OPTS=(X3 Rdkultra X5 X86 S100)
 BUILD_TESTING_OPTS=(OFF ON)
-GETOPT_ARGS=`getopt -o p:s:g:r:h -al platform:,selction:,build_testing:,help -- "$@"`
+GETOPT_ARGS=`getopt -o p:s:g:c:r:h -al platform:,selction:,build_testing:,help -- "$@"`
 eval set -- "$GETOPT_ARGS"
 
 while [ -n "$1" ]
@@ -62,6 +64,11 @@ do
         echo "invalid build_testing: $build_testing"
         show_usage
       fi
+      ;;
+    -c|--cmake-args)
+      CMAKE_ARGS=$2
+      shift 2
+      echo "cmake-args: $CMAKE_ARGS"
       ;;
     -r|--raw_options)
       RAW_OPTIONS=$2
@@ -272,6 +279,7 @@ else
           --merge-install \
           --cmake-force-configure \
           --cmake-args \
+            $CMAKE_ARGS \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             --no-warn-unused-cli \
             -DCMAKE_TOOLCHAIN_FILE=`pwd`/robot_dev_config/aarch64_toolchainfile.cmake \

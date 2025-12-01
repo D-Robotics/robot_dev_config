@@ -13,6 +13,13 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_xlm/COLCON_IGNORE
     ./src/box/hobot_perception/palm_detection_mediapipe/COLCON_IGNORE
     ./src/box/hobot_perception/hand_landmarks_mediapipe/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_demos/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_examples/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_launch/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_python/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_ros/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_rviz_plugins/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_viz/COLCON_IGNORE
 )
 
 LINK_DIRS=(
