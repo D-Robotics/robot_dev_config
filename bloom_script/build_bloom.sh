@@ -5,7 +5,7 @@
 platform=X3
 build_testing=OFF
 export DEB_BUILD_OPTIONS="nocheck"
-ROS_DISTRO="humble"
+ROS_DISTRO="jazzy"
 #*******************
 
 function show_usage() {

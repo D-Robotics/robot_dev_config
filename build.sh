@@ -3,7 +3,7 @@
 #*******************
 platform=X3
 build_testing=OFF
-ros_distro=humble
+ros_distro=jazzy
 #*******************
 
 function show_usage() {

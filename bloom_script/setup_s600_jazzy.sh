@@ -2,10 +2,11 @@
 
 #curl -sSL https://archive.d-robotics.cc/keys/sunrise.gpg -o /usr/share/keyrings/sunrise.gpg
 #echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/sunrise.gpg] https://archive.d-robotics.cc/ubuntu-rdk-s100-beta/ Noble main" | sudo    tee /etc/apt/sources.list.d/sunrise.list > /dev/null
-#echo "deb [trusted=true arch=$(dpkg --print-architecture)] http://sysgbj2.hobot.cc/ubuntu-rdk-s100-beta Noble main" | sudo    tee /etc/apt/sources.list.d/multistrap-d-robotics.list > /dev/null
+echo "deb [trusted=true arch=$(dpkg --print-architecture)] http://sysgbj2.hobot.cc/ubuntu-rdk-s600-beta noble main" | sudo    tee /etc/apt/sources.list.d/multistrap-d-robotics.list > /dev/null
 
 
 apt-get update
+ln -s /usr/bin/python3 /usr/bin/python
 
 apt install -y libssl-dev
 
