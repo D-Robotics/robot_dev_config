@@ -29,9 +29,9 @@ apt install -y ros-humble-osrf-testing-tools-cpp
 apt install -y ros-humble-cv-bridge
 apt install -y tros-humble-ros-workspace
 
-cp -rf ../sysroot_docker/usr_x3/share/OpenCV /usr/share/
-cp -rf ../sysroot_docker/usr_x3/lib/libopencv_world* /usr/lib/
-cp -rf ../sysroot_docker/usr_x3/include/opencv2 /usr/include
+cp -rf ../sysroot_docker_noble/usr_x3/share/OpenCV /usr/share/
+cp -rf ../sysroot_docker_noble/usr_x3/lib/libopencv_world* /usr/lib/
+cp -rf ../sysroot_docker_noble/usr_x3/include/opencv2 /usr/include
 
-cp -rf ../sysroot_docker/usr_x3/lib/aarch64-linux-gnu/libcrypto.so.1.1 /usr/lib/aarch64-linux-gnu/
+cp -rf ../sysroot_docker_noble/usr_x3/lib/aarch64-linux-gnu/libcrypto.so.1.1 /usr/lib/aarch64-linux-gnu/
 

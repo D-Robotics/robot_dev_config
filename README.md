@@ -49,7 +49,7 @@ The entire project directory structure is as follows
 
 ```text
 ├── cc_ws
-│   ├── sysroot_docker```bash
+│   ├── sysroot_docker_noble
 │   │   ├── etc
 │   │   ├── lib -> usr/lib
 │   │   ├── opt

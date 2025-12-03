@@ -40,7 +40,7 @@ pre_function() {
     echo -e "\033[1;32m[INFO]\033[0m Running pre_function"
     
     # ros部分package的cmake中硬编码头文件在/usr/include中
-    SYSROOT_DIR="`pwd`/../sysroot_docker/usr"
+    SYSROOT_DIR="`pwd`/../sysroot_docker_noble/usr"
     TARGET_DIR="/usr"
     SYMLINKS_FILE="/tmp/sysroot_temp_symlinks.txt"
     >"$SYMLINKS_FILE"

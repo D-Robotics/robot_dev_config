@@ -25,7 +25,7 @@ function parse_sysroot_path() {
         exit
     fi
 
-    replaced_prefix_path=${build_sysroot_docker_dir_path}/sysroot_docker
+    replaced_prefix_path=${build_sysroot_docker_dir_path}/sysroot_docker_noble
 }
 
 if [ $# -lt 1 ];then

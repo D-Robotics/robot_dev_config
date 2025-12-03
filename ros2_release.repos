@@ -239,7 +239,7 @@ repositories:
     type: git
     url: https://github.com/ros/rosdistro.git
     version: jazzy/2025-11-19
-  ../../sysroot_docker:
+  ../../sysroot_docker_noble:
     type: git
-    url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.8
+    url: https://github.com/D-Robotics/sysroot_docker_noble.git
+    version: tros_2.5.0

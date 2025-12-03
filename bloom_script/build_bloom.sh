@@ -2,7 +2,7 @@
 
 
 #*******************
-platform=X3
+platform=S600
 build_testing=OFF
 export DEB_BUILD_OPTIONS="nocheck"
 ROS_DISTRO="jazzy"

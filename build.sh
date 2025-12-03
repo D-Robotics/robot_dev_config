@@ -1,9 +1,10 @@
 #!/bin/bash
 
 #*******************
-platform=X3
+platform=S600
 build_testing=OFF
 ros_distro=jazzy
+SYSROOT_NAME=sysroot_docker_noble
 #*******************
 
 function show_usage() {
@@ -91,7 +92,7 @@ if [ -z "${PACKAGE_SELECTION}" ]; then
 fi
 echo "PACKAGE_SELECTION: $PACKAGE_SELECTION"
 
-rm `pwd`/../sysroot_docker/usr
+rm `pwd`/../${SYSROOT_NAME}/usr
 
 export ROS_VERSION=2
 export PLATFORM_X86=OFF
@@ -110,7 +111,7 @@ fi
 echo "build platform " $platform
 if [ $platform == "X86" ]; then
   echo "build X86"
-  ln -s `pwd`/../sysroot_docker/usr_x86 `pwd`/../sysroot_docker/usr
+  ln -s `pwd`/../${SYSROOT_NAME}/usr_x86 `pwd`/../${SYSROOT_NAME}/usr
   # 只编译x86平台的package
   ./robot_dev_config/x86_build.sh
   echo "PACKAGE_SELECTION: $PACKAGE_SELECTION"
@@ -127,7 +128,7 @@ if [ $platform == "X86" ]; then
       -DBUILD_TESTING:BOOL=OFF \
       -DPLATFORM_X86=ON \
       -DBUILD_HBMEM=ON \
-      -DTHIRD_PARTY=`pwd`/../sysroot_docker
+      -DTHIRD_PARTY=`pwd`/../${SYSROOT_NAME}
 
 else
   ## 配置交叉编译工具链
@@ -137,32 +138,32 @@ else
   source /opt/ros/$ros_distro/setup.bash
   if [ $platform == "X3" ]; then
     echo "build X3"
-    ln -s `pwd`/../sysroot_docker/usr_x3 `pwd`/../sysroot_docker/usr
+    ln -s `pwd`/../${SYSROOT_NAME}/usr_x3 `pwd`/../${SYSROOT_NAME}/usr
     # 只编译X3平台的package
     ./robot_dev_config/all_build.sh
   elif [ $platform == "Rdkultra" ]; then
     echo "build Rdkultra"
-    ln -s `pwd`/../sysroot_docker/usr_rdkultra `pwd`/../sysroot_docker/usr
+    ln -s `pwd`/../${SYSROOT_NAME}/usr_rdkultra `pwd`/../${SYSROOT_NAME}/usr
     # 只编译Rdkultra平台的package
     ./robot_dev_config/rdkultra_build.sh
   elif [ $platform == "X5" ]; then
     echo "build X5"
-    ln -s `pwd`/../sysroot_docker/usr_x5 `pwd`/../sysroot_docker/usr
+    ln -s `pwd`/../${SYSROOT_NAME}/usr_x5 `pwd`/../${SYSROOT_NAME}/usr
     # 只编译X5平台的package
     ./robot_dev_config/x5_build.sh pre
   elif [ $platform == "S100" ]; then
     echo "build S100"
-    ln -s `pwd`/../sysroot_docker/usr_s100 `pwd`/../sysroot_docker/usr
+    ln -s `pwd`/../${SYSROOT_NAME}/usr_s100 `pwd`/../${SYSROOT_NAME}/usr
     # 只编译S100平台的package
     ./robot_dev_config/s100_build.sh
   elif [ $platform == "S600" ]; then
     echo "build S600"
-    ln -s `pwd`/../sysroot_docker/usr_s600 `pwd`/../sysroot_docker/usr
+    ln -s `pwd`/../${SYSROOT_NAME}/usr_s600 `pwd`/../${SYSROOT_NAME}/usr
     # 只编译S100平台的package
     ./robot_dev_config/s600_build.sh
   fi
-  export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
-  #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/
+  export PKG_CONFIG_PATH=`pwd`/../${SYSROOT_NAME}/usr/lib/aarch64-linux-gnu/pkgconfig
+  #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../${SYSROOT_NAME}/
 
   if [[ "$platform" == "X3" && "$PACKAGE_SELECTION" =~ "hobot_audio" ]]; then
     echo "单独编译hobot_audio，安装目录为install_audio"

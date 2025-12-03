@@ -45,7 +45,7 @@ vcs-import src < ./robot_dev_config/ros2.repos
 
 ```text
 ├── cc_ws
-│   ├── sysroot_docker
+│   ├── sysroot_docker_noble
 │   │   ├── etc
 │   │   ├── lib -> usr/lib
 │   │   ├── opt
