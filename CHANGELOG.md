@@ -1,13 +1,18 @@
 # Changelog for TogetheROS
 
-### 版本号：2.4.5 (To Be Released)
+### 版本号：2.4.5 (2025-10-28)
 
 功能变更：
 
 新增功能：
-- 支持x5下移动solution相关模块交叉编译。
 
-问题修复:
+问题修复（`RDK X5`平台）：
+
+- 修复图像处理加速模块`hobot_cv`使用vse加速图像resize的bug。
+- 修复板端模型推理框架[`dnn_node`](https://github.com/D-Robotics/hobot_dnn.git)统计推理延迟错误的问题。
+- 修复由于MIPI图像采集和算法等模块的`ros component so`安装路径错误，导致运行时加载失败的问题。
+- 优化图像编解码模块`hobot_codec`的配置，删除无效的配置参数，增加用于debug的配置参数。
+
 
 ### 版本号：2.4.4 (2025-10-24)
 
