@@ -91,16 +91,11 @@ pre_function() {
         SRC_FILE="$SYSROOT_DIR/ros/humble/bin/$file"
         DEST_FILE="/opt/ros/humble/bin/$file"
         
-        if [ ! -f "$DEST_FILE" ]; then
-            echo "  - $file not exit, coping..."
-            if [ -f "$SRC_FILE" ]; then
-                cp "$SRC_FILE" "$DEST_FILE"
-                echo "  - copy $file done"
-            else
-                echo "  - warnning: source file $SRC_FILE not exist"
-            fi
+        if [ -f "$SRC_FILE" ]; then
+            cp "$SRC_FILE" "$DEST_FILE"
+            echo "  - copy $file done"
         else
-            echo "  - $file exit, skip"
+            echo "  - warnning: source file $SRC_FILE not exist"
         fi
     done
 
@@ -112,16 +107,11 @@ pre_function() {
         SRC_LIB="$SYSROOT_DIR/ros/humble/lib/x86_64-linux-gnu/$lib_file"
         DEST_LIB="$TARGET_DIR/lib/x86_64-linux-gnu/$lib_file"
         
-        if [ ! -f "$DEST_LIB" ]; then
-            echo "  - $lib_file not exit, coping..."
-            if [ -f "$SRC_LIB" ]; then
-                cp "$SRC_LIB" "$DEST_LIB"
-                echo "  - copy $lib_file done"
-            else
-                echo "  - warnning: source file $SRC_LIB not exist"
-            fi
+        if [ -f "$SRC_LIB" ]; then
+            cp "$SRC_LIB" "$DEST_LIB"
+            echo "  - copy $lib_file done"
         else
-            echo "  - $lib_file exit, skip"
+            echo "  - warnning: source file $SRC_LIB not exist"
         fi
     done
     echo -e "\033[1;32m[INFO]\033[0m End pre_function"
