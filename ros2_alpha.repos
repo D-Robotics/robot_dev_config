@@ -2,7 +2,7 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: developcd 
+    version: develop
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
