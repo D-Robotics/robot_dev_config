@@ -6,7 +6,7 @@ repositories:
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.4
+    version: tros_2.3.6
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -14,11 +14,11 @@ repositories:
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
-    version: tros_2.3.2
+    version: tros_2.3.3
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.4
+    version: tros_2.3.5
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
@@ -126,11 +126,11 @@ repositories:
   box/hobot_perception/hand_landmarks_mediapipe:
     type: git
     url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
-    version: tros_1.0.0
+    version: tros_1.1.0
   box/hobot_xlm:
     type: git
     url: https://github.com/D-Robotics/hobot_xlm.git
-    version: tros_0.1.0
+    version: tros_1.0.0
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
@@ -194,7 +194,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.3.15
+    version: tros_2.4.1
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -206,7 +206,7 @@ repositories:
   box/hobot_sensor/hobot_usb_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_usb_cam.git
-    version: tros_2.3.0
+    version: tros_2.3.1
   box/hobot_sensor/hobot_stereo_usb_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_stereo_usb_cam.git
@@ -238,11 +238,11 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.10
+    version: tros-humble_v0.0.11
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
-    version: tros-humble_v0.0.8
+    version: tros-humble_v0.0.9
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
@@ -250,4 +250,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.10
+    version: tros_2.4.12
