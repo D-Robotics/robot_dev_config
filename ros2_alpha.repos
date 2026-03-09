@@ -151,10 +151,6 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/parking_search.git
     version: tros_2.1.0
-  box/hobot_slam/orb_slam3:
-    type: git
-    url: https://github.com/D-Robotics/orb_slam3.git
-    version: tros_2.3.1
   box/hobot_tts:
     type: git
     url: https://github.com/D-Robotics/hobot_tts.git
@@ -194,7 +190,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.4.0
+    version: tros_2.5.0
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -238,7 +234,7 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.9
+    version: tros-jazzy_v0.0.3
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
@@ -250,4 +246,4 @@ repositories:
   ../../sysroot_docker_noble:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker_noble.git
-    version: tros_2.5.0
+    version: tros_2.5.1
