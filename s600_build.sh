@@ -11,6 +11,8 @@ touch \
     ./src/box/hobot_perception/elevation_net/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_lmk_detection/COLCON_IGNORE \
+    ./src/box/hobot_perception/palm_detection_mediapipe/COLCON_IGNORE \
+    ./src/box/hobot_perception/hand_landmarks_mediapipe/COLCON_IGNORE \
     ./src/box/hobot_perception/face_age_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/face_landmarks_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/hobot_falldown_detection/COLCON_IGNORE \
@@ -18,7 +20,6 @@ touch \
     ./src/box/hobot_perception/mono2d_trash_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/mono3d_indoor_detection/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
-    ./src/box/hobot_perception/mono_edgesam/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
     ./src/box/hobot_perception/dstereo_occnet/COLCON_IGNORE \
     ./src/box/hobot_perception/tros_lowpass_filter/COLCON_IGNORE \
@@ -27,6 +28,7 @@ touch \
     ./src/app/hobot_chatbot/COLCON_IGNORE \
     ./src/box/hobot_vio/COLCON_IGNORE \
     ./src/box/hobot_hdmi/COLCON_IGNORE \
+    ./src/box/hobot_clip/COLCON_IGNORE \
     ./src/box/hobot_dnn/dnn_benchmark_example/COLCON_IGNORE \
     ./src/box/hobot_dnn/dnn_node_sample/COLCON_IGNORE \
     ./src/box/hobot_interactions/audio_tracking/COLCON_IGNORE \
