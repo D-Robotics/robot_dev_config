@@ -30,7 +30,7 @@ repositories:
   box/hobot_perception/mono2d_body_detection:
     type: git
     url: https://github.com/D-Robotics/mono2d_body_detection.git
-    version: tros_2.5.0
+    version: tros_2.5.1
   box/hobot_perception/mot:
     type: git
     url: https://github.com/D-Robotics/mot.git
@@ -118,7 +118,7 @@ repositories:
   box/hobot_perception/mono_edgesam:
     type: git
     url: https://github.com/D-Robotics/mono_edgesam.git
-    version: tros_0.2.0
+    version: tros_0.3.1
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
@@ -126,7 +126,7 @@ repositories:
   box/hobot_perception/reid:
     type: git
     url: https://github.com/D-Robotics/reid.git
-    version: tros_0.2.0
+    version: tros_0.3.0
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
