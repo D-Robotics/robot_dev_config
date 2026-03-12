@@ -77,7 +77,7 @@ elif [ $platform == "Rdkultra" ]; then
 elif [ $platform == "X5" ]; then
     echo "build X5"
     export PLATFORM="X5"
-    ./robot_dev_config/x5_build.sh
+    ./robot_dev_config/x5_build.sh pkg
 elif [ $platform == "S100" ]; then
     echo "build S100"
     export PLATFORM="S100"
