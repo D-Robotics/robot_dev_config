@@ -136,6 +136,16 @@ post_function() {
     echo -e "\033[1;32m[INFO]\033[0m End post_function"
 }
 
+pkg_function() {
+    echo -e "\033[1;32m[INFO]\033[0m Running pkg_function"
+
+    for file in "${COLCON_IGNORE_LIST[@]}"; do
+        touch "$file"
+    done
+
+    echo -e "\033[1;32m[INFO]\033[0m End pkg_function"
+}
+
 main() {
     case "$1" in
         pre)
@@ -144,8 +154,11 @@ main() {
         post)
             post_function
             ;;
+        pkg)
+            post_function
+            ;;
         *)
-            echo "用法: $0 [pre|post]"
+            echo "用法: $0 [pre|post|pkg]"
             exit 1
             ;;
     esac
