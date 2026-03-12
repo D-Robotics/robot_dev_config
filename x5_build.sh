@@ -155,7 +155,7 @@ main() {
             post_function
             ;;
         pkg)
-            post_function
+            pkg_function
             ;;
         *)
             echo "用法: $0 [pre|post|pkg]"
