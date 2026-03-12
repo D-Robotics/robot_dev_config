@@ -63,7 +63,7 @@ do
     *) echo $1,$2 show_usage; break;;
   esac
 done
-./robot_dev_config/clear_COLCON_IGNORE.sh
+#./robot_dev_config/clear_COLCON_IGNORE.sh
 if [ $platform == "X3" ]; then
     echo "build X3"
     export PLATFORM="X3"
