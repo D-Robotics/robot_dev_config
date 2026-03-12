@@ -230,7 +230,7 @@ repositories:
   box/sensevoice_ros2:
     type: git
     url: https://github.com/D-Robotics/sensevoice_ros2.git
-    version: tros_1.0.0
+    version: tros_1.1.0
   box/hobot_llamacpp:
     type: git
     url: https://github.com/D-Robotics/hobot_llamacpp.git
