@@ -238,7 +238,7 @@ repositories:
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-humble_v0.0.12
+    version: tros-v2.5.2
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
@@ -250,4 +250,4 @@ repositories:
   ../../sysroot_docker:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker.git
-    version: tros_2.4.12
+    version: tros_2.4.13
