@@ -1,5 +1,12 @@
 # Changelog for TogetheROS
 
+### 2.4.5以后版本
+
+`RDK X3/X5/S100`平台的changelog详见：https://developer.d-robotics.cc/rdk_doc/Robot_development/quick_start/changelog
+
+`RDK S600`平台的changelog详见：https://github.com/D-Robotics/rdk_doc/blob/tros-s600/docs/05_Robot_development/01_quick_start/changelog.md
+
+
 ### 版本号：2.4.5 (2025-10-28)
 
 功能变更：
