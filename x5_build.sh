@@ -11,8 +11,6 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE
     ./src/box/hobot_llamacpp/COLCON_IGNORE
     ./src/box/hobot_xlm/COLCON_IGNORE
-    ./src/box/hobot_perception/palm_detection_mediapipe/COLCON_IGNORE
-    ./src/box/hobot_perception/hand_landmarks_mediapipe/COLCON_IGNORE
     ./src/rtabmap_ros/rtabmap_demos/COLCON_IGNORE
     ./src/rtabmap_ros/rtabmap_examples/COLCON_IGNORE
     ./src/rtabmap_ros/rtabmap_launch/COLCON_IGNORE

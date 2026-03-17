@@ -122,11 +122,11 @@ repositories:
   box/hobot_perception/palm_detection_mediapipe:
     type: git
     url: https://github.com/D-Robotics/palm_detection_mediapipe.git
-    version: tros_1.0.0
+    version: tros_1.2.0
   box/hobot_perception/hand_landmarks_mediapipe:
     type: git
     url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
-    version: tros_1.1.0
+    version: tros_1.2.0
   box/hobot_xlm:
     type: git
     url: https://github.com/D-Robotics/hobot_xlm.git
