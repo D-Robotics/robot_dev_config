@@ -26,6 +26,8 @@ touch \
     ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_mobilesam/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_edgesam/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_edgetam_prompt/COLCON_IGNORE \
+    ./src/box/hobot_perception/mono_edgetam_track/COLCON_IGNORE \
     ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE \
     ./src/box/hobot_perception/reid/COLCON_IGNORE \
     ./src/box/hobot_perception/dstereo_occnet/COLCON_IGNORE \
