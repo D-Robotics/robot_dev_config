@@ -246,7 +246,7 @@ repositories:
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
-    version: tros-humble_v0.0.9
+    version: tros-humble_v0.0.10
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
