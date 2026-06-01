@@ -138,7 +138,7 @@ repositories:
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
-    version: tros_0.3.0
+    version: tros_1.1.0
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
