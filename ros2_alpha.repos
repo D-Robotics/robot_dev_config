@@ -2,11 +2,11 @@ repositories:
   box/hobot_dnn:
     type: git
     url: https://github.com/D-Robotics/hobot_dnn.git
-    version: tros_2.6.0
+    version: tros_2.6.1
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.5
+    version: tros_2.3.7
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -14,7 +14,7 @@ repositories:
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
-    version: tros_2.3.2
+    version: tros_2.3.3
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
@@ -43,14 +43,6 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hand_gesture_detection.git
     version: tros_2.4.1
-  box/hobot_perception/palm_detection_mediapipe:
-    type: git
-    url: https://github.com/D-Robotics/palm_detection_mediapipe.git
-    version: tros_1.1.0
-  box/hobot_perception/hand_landmarks_mediapipe:
-    type: git
-    url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
-    version: tros_1.1.0
   box/hobot_perception/face_age_detection:
     type: git
     url: https://github.com/D-Robotics/face_age_detection.git
@@ -90,7 +82,7 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.4.6
+    version: tros_2.5.8
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils.git
@@ -98,7 +90,7 @@ repositories:
   box/hobot_perception/dstereo_occnet:
     type: git
     url: https://github.com/D-Robotics/dstereo_occnet
-    version: tros_1.0.1
+    version: tros_1.0.4
   box/hobot_sensor/hobot_zed_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_zed_cam.git
@@ -119,6 +111,10 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/mono_edgesam.git
     version: tros_0.3.1
+  box/hobot_perception/mono_edgetam:
+    type: git
+    url: https://github.com/D-Robotics/mono_edgetam.git
+    version: tros_1.0.0
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
@@ -127,10 +123,22 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/reid.git
     version: tros_0.3.0
+  box/hobot_perception/palm_detection_mediapipe:
+    type: git
+    url: https://github.com/D-Robotics/palm_detection_mediapipe.git
+    version: tros_1.2.0
+  box/hobot_perception/hand_landmarks_mediapipe:
+    type: git
+    url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
+    version: tros_1.2.1
+  box/hobot_xlm:
+    type: git
+    url: https://github.com/D-Robotics/hobot_xlm.git
+    version: tros_1.0.0
   box/hobot_clip:
     type: git
     url: https://github.com/D-Robotics/hobot_clip.git
-    version: tros_1.0.0
+    version: tros_1.1.0
   box/hobot_interactions/gesture_control:
     type: git
     url: https://github.com/D-Robotics/gesture_control.git
@@ -190,7 +198,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.5.5
+    version: tros_2.5.6
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -238,7 +246,7 @@ repositories:
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
-    version: tros-humble_v0.0.9
+    version: tros-humble_v0.0.10
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git

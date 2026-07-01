@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#curl -sSL https://archive.d-robotics.cc/keys/sunrise.gpg -o /usr/share/keyrings/sunrise.gpg
+curl -sSL https://archive.d-robotics.cc/keys/sunrise.gpg -o /usr/share/keyrings/sunrise.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/sunrise.gpg]  http://archive.d-robotics.cc/ubuntu-rdk-s100-rc noble main" | sudo    tee /etc/apt/sources.list.d/sunrise.list > /dev/null
 
 apt-get update
