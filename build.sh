@@ -99,6 +99,7 @@ export PLATFORM_X86=OFF
 export PLATFORM_X3=OFF
 export PLATFORM_X5=OFF
 export PLATFORM_S100=OFF
+export PLATFORM_S600=OFF
 export PLATFORM_Rdkultra=OFF
 
 ## 清除配置选项
