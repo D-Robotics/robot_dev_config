@@ -101,6 +101,18 @@ def main():
         # rosdep_update()
         # time.sleep(1)
         bloom_generate()
+        # Fix debian/rules: correct bundled lib path and make shlibdeps non-fatal
+        if os.path.exists('debian/rules'):
+            with open('debian/rules', 'r') as f:
+                rules = f.read()
+            # Fix library search path for bundled libs
+            rules = rules.replace('/opt/hobot_xlm/lib/', '/lib/hobot_xlm/lib/')
+            # Add || true to handle unresolved deps of pre-compiled libs gracefully
+            rules = rules.replace(
+                '--dpkg-shlibdeps-params=--ignore-missing-info',
+                '--dpkg-shlibdeps-params=--ignore-missing-info || true')
+            with open('debian/rules', 'w') as f:
+                f.write(rules)
         status, stdout, stderr = bloom_build()
         if status:
             continue
