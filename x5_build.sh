@@ -12,6 +12,16 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_llamacpp/COLCON_IGNORE
     ./src/box/hobot_audio/COLCON_IGNORE
     ./src/app/hobot_chatbot/COLCON_IGNORE
+    ./src/box/hobot_xlm/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_demos/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_examples/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_launch/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_python/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_ros/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_rviz_plugins/COLCON_IGNORE
+    ./src/rtabmap_ros/rtabmap_viz/COLCON_IGNORE
+    ./src/box/hobot_perception/mono_edgetam_prompt/COLCON_IGNORE
+    ./src/box/hobot_perception/mono_edgetam_track/COLCON_IGNORE
 )
 
 LINK_DIRS=(
@@ -22,8 +32,15 @@ LINK_DIRS=(
     include/uuid
     include/aarch64-linux-gnu/qt5
     include/opencv4
+    include/suitesparse
     lib/aarch64-linux-gnu/qt5
     lib/libOpenNI.so
+    lib/aarch64-linux-gnu/libcxsparse.so
+    lib/aarch64-linux-gnu/libcholmod.so
+    lib/aarch64-linux-gnu/libamd.so
+    lib/aarch64-linux-gnu/libcolamd.so
+    lib/aarch64-linux-gnu/libcamd.so
+    lib/aarch64-linux-gnu/libccolamd.so
     lib/aarch64-linux-gnu/libpcl_common.so
     lib/aarch64-linux-gnu/libOpenNI2.so
     lib/aarch64-linux-gnu/libblas.so
@@ -36,6 +53,9 @@ LINK_DIRS=(
     lib/aarch64-linux-gnu/librt.a
     lib/aarch64-linux-gnu/libtinyxml.so
     lib/aarch64-linux-gnu/libtinyxml.so.2.6.2
+    lib/x86_64-linux-gnu/libQt5Core.so.5
+    lib/x86_64-linux-gnu/libdouble-conversion.so.3
+    lib/x86_64-linux-gnu/libpcre2-16.so.0
 )
 
 pre_function() {
@@ -63,6 +83,39 @@ pre_function() {
     for file in "${COLCON_IGNORE_LIST[@]}"; do
         touch "$file"
     done
+
+    # file for rtabmap building
+    RES_TOOL_FILES=(
+        "rtabmap-res_tool"
+        "rtabmap-res_tool-0.3.0"
+    )
+    for file in "${RES_TOOL_FILES[@]}"; do
+        SRC_FILE="$SYSROOT_DIR/ros/jazzy/bin/$file"
+        DEST_FILE="/opt/ros/jazzy/bin/$file"
+        
+        if [ -f "$SRC_FILE" ]; then
+            cp "$SRC_FILE" "$DEST_FILE"
+            echo "  - copy $file done"
+        else
+            echo "  - warnning: source file $SRC_FILE not exist"
+        fi
+    done
+
+    LIB_FILES=(
+        "librtabmap_utilite.so.0.22"
+    )
+
+    for lib_file in "${LIB_FILES[@]}"; do
+        SRC_LIB="$SYSROOT_DIR/ros/jazzy/lib/x86_64-linux-gnu/$lib_file"
+        DEST_LIB="$TARGET_DIR/lib/x86_64-linux-gnu/$lib_file"
+        
+        if [ -f "$SRC_LIB" ]; then
+            cp "$SRC_LIB" "$DEST_LIB"
+            echo "  - copy $lib_file done"
+        else
+            echo "  - warnning: source file $SRC_LIB not exist"
+        fi
+    done
     echo -e "\033[1;32m[INFO]\033[0m End pre_function"
 }
 
@@ -85,6 +138,16 @@ post_function() {
     echo -e "\033[1;32m[INFO]\033[0m End post_function"
 }
 
+pkg_function() {
+    echo -e "\033[1;32m[INFO]\033[0m Running pkg_function"
+
+    for file in "${COLCON_IGNORE_LIST[@]}"; do
+        touch "$file"
+    done
+
+    echo -e "\033[1;32m[INFO]\033[0m End pkg_function"
+}
+
 main() {
     case "$1" in
         pre)
@@ -93,8 +156,11 @@ main() {
         post)
             post_function
             ;;
+        pkg)
+            pkg_function
+            ;;
         *)
-            echo "用法: $0 [pre|post]"
+            echo "用法: $0 [pre|post|pkg]"
             exit 1
             ;;
     esac
