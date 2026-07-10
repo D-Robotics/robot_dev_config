@@ -6,7 +6,7 @@ repositories:
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.7
+    version: tros_2.3.8
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
@@ -154,7 +154,7 @@ repositories:
   box/hobot_interactions/audio_tracking:
     type: git
     url: https://github.com/D-Robotics/audio_tracking.git
-    version: tros_2.1.0
+    version: tros_2.1.1
   box/hobot_interactions/parking_search:
     type: git
     url: https://github.com/D-Robotics/parking_search.git

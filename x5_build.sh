@@ -22,6 +22,7 @@ COLCON_IGNORE_LIST=(
     ./src/rtabmap_ros/rtabmap_viz/COLCON_IGNORE
     ./src/box/hobot_perception/mono_edgetam_prompt/COLCON_IGNORE
     ./src/box/hobot_perception/mono_edgetam_track/COLCON_IGNORE
+    ./src/box/hobot_llm/COLCON_IGNORE
 )
 
 LINK_DIRS=(
