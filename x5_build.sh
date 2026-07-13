@@ -23,6 +23,11 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_perception/mono_edgetam_prompt/COLCON_IGNORE
     ./src/box/hobot_perception/mono_edgetam_track/COLCON_IGNORE
     ./src/box/hobot_llm/COLCON_IGNORE
+    ./src/box/hobot_vio/COLCON_IGNORE
+    ./src/box/hobot_perception/hand_gesture_detection/COLCON_IGNORE
+    ./src/box/hobot_perception/mono_edgetam/COLCON_IGNORE
+    ./src/box/hobot_perception/mono_pwcnet/COLCON_IGNORE
+    ./src/box/hobot_perception/hobot_yolo_world/COLCON_IGNORE
 )
 
 LINK_DIRS=(

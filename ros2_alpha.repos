@@ -98,7 +98,7 @@ repositories:
   box/hobot_perception/hobot_yolo_world:
     type: git
     url: https://github.com/D-Robotics/hobot_yolo_world.git
-    version: tros_0.4.1
+    version: tros_0.4.2
   box/hobot_perception/hobot_dosod:
     type: git
     url: https://github.com/D-Robotics/hobot_dosod.git
@@ -254,4 +254,4 @@ repositories:
   ../../sysroot_docker_noble:
     type: git
     url: https://github.com/D-Robotics/sysroot_docker_noble.git
-    version: tros_2.5.5
+    version: tros_2.5.6
