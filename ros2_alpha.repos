@@ -106,7 +106,7 @@ repositories:
   box/hobot_perception/mono_mobilesam:
     type: git
     url: https://github.com/D-Robotics/mono_mobilesam.git
-    version: tros_0.2.0
+    version: tros_0.2.1
   box/hobot_perception/mono_edgesam:
     type: git
     url: https://github.com/D-Robotics/mono_edgesam.git
@@ -118,7 +118,7 @@ repositories:
   box/hobot_perception/mono_pwcnet:
     type: git
     url: https://github.com/D-Robotics/mono_pwcnet.git
-    version: tros_0.1.0rc1
+    version: tros_0.2.0
   box/hobot_perception/reid:
     type: git
     url: https://github.com/D-Robotics/reid.git
