@@ -33,3 +33,6 @@ touch \
     ./src/box/hobot_interactions/gesture_control/COLCON_IGNORE \
     ./src/box/hobot_interactions/parking_search/COLCON_IGNORE \
     ./src/box/hobot_llamacpp/COLCON_IGNORE \
+    ./src/box/speech_agent_tts/COLCON_IGNORE \
+    ./src/box/speech_agent_asr/COLCON_IGNORE \
+    ./src/box/speech_agent_audio/COLCON_IGNORE \

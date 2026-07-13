@@ -235,6 +235,18 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hobot_llamacpp.git
     version: develop
+  box/speech_agent_tts:
+    type: git
+    url: https://github.com/D-Robotics/speech_agent_tts.git
+    version: develop
+  box/speech_agent_asr:
+    type: git
+    url: https://github.com/D-Robotics/speech_agent_asr.git
+    version: develop
+  box/speech_agent_audio:
+    type: git
+    url: https://github.com/D-Robotics/speech_agent_audio.git
+    version: develop
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
