@@ -28,6 +28,8 @@ set(crypto_LIB ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-li
 set(BUILD_TESTING off)
 set(BUILD_HBMEM ON)
 set(PYTHON_SOABI cpython-310-aarch64-linux-gnu)
+set(Python3_INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/include/python3.10)
+set(Python3_LIBRARY ${CMAKE_CURRENT_LIST_DIR}/../../sysroot_docker/usr/lib/aarch64-linux-gnu/libpython3.10.so)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath-link=/opt/ros/humble/lib/aarch64-linux-gnu -Wl,-rpath-link=/opt/ros/humble/lib/")
 
 # This assumes that pthread will be available on the target system
