@@ -37,3 +37,6 @@ touch \
     ./src/box/hobot_xlm/COLCON_IGNORE \
     ./src/box/hobot_perception/palm_detection_mediapipe/COLCON_IGNORE \
     ./src/box/hobot_perception/hand_landmarks_mediapipe/COLCON_IGNORE \
+    ./src/box/speech_agent_tts/COLCON_IGNORE \
+    ./src/box/speech_agent_asr/COLCON_IGNORE \
+    ./src/box/speech_agent_audio/COLCON_IGNORE \
