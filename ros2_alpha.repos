@@ -246,15 +246,15 @@ repositories:
   box/speech_agent_tts:
     type: git
     url: https://github.com/D-Robotics/speech_agent_tts.git
-    version: tros_1.1.0
+    version: tros_1.2.0
   box/speech_agent_asr:
     type: git
     url: https://github.com/D-Robotics/speech_agent_asr.git
-    version: tros_1.1.0
+    version: tros_1.2.0
   box/speech_agent_audio:
     type: git
     url: https://github.com/D-Robotics/speech_agent_audio.git
-    version: tros_1.1.0
+    version: tros_1.2.0
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
