@@ -150,7 +150,7 @@ else
     echo "build S100"
     ln -s `pwd`/../sysroot_docker/usr_s100 `pwd`/../sysroot_docker/usr
     # 只编译S100平台的package
-    ./robot_dev_config/s100_build.sh
+    ./robot_dev_config/s100_build.sh  pre
   fi
   export PKG_CONFIG_PATH=`pwd`/../sysroot_docker/usr/lib/aarch64-linux-gnu/pkgconfig
   #export PKG_CONFIG_SYSROOT_DIR=`pwd`/../sysroot_docker/
@@ -291,6 +291,9 @@ else
     
     if [[ "$platform" == "X5" ]]; then
       ./robot_dev_config/x5_build.sh post
+    fi
+    if [[ "$platform" == "S100" ]]; then
+      ./robot_dev_config/s100_build.sh post
     fi
   fi
 

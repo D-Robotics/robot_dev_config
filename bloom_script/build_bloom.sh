@@ -81,7 +81,7 @@ elif [ $platform == "X5" ]; then
 elif [ $platform == "S100" ]; then
     echo "build S100"
     export PLATFORM="S100"
-    ./robot_dev_config/s100_build.sh
+    ./robot_dev_config/s100_build.sh pkg
 fi
 
 CURRENT_PATH=`pwd`/
