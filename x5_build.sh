@@ -10,6 +10,7 @@ COLCON_IGNORE_LIST=(
     ./src/box/hobot_sensor/hobot_rgbd_cam/COLCON_IGNORE
     ./src/box/hobot_sensor/hobot_stereo_usb_cam/COLCON_IGNORE
     ./src/box/hobot_llamacpp/COLCON_IGNORE
+    ./src/box/hobot_locateanything/COLCON_IGNORE \
     ./src/box/hobot_audio/COLCON_IGNORE
     ./src/app/hobot_chatbot/COLCON_IGNORE
     ./src/box/hobot_xlm/COLCON_IGNORE
