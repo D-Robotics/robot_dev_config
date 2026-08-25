@@ -238,7 +238,11 @@ repositories:
   box/hobot_llamacpp:
     type: git
     url: https://github.com/D-Robotics/hobot_llamacpp.git
-    version: tros_0.4.0
+    version: tros_0.5.0
+  box/hobot_locateanything:
+    type: git
+    url: https://github.com/D-Robotics/hobot_locateanything.git
+    version: tros_0.1.1
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
