@@ -275,10 +275,17 @@ else
 
     mkdir -p install && cp ./robot_dev_config/create_soft_link.py install/
 
+    CCACHE_ARGS=""
+    if command -v ccache >/dev/null 2>&1; then
+      CCACHE_ARGS="-DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache"
+      export CCACHE_DIR=${CCACHE_DIR:-$HOME/.cache/ccache}
+      export CCACHE_MAXSIZE=${CCACHE_MAXSIZE:-10G}
+    fi
+
     colcon build $PACKAGE_SELECTION \
           --merge-install \
-          --cmake-force-configure \
           --cmake-args \
+            $CCACHE_ARGS \
             $CMAKE_ARGS \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             --no-warn-unused-cli \
