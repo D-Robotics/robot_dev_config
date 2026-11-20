@@ -16,6 +16,7 @@ apt install -y libgflags-dev
 #apt install -y librealsense2-dev
 #apt install -y libuthash-dev
 apt install -y  libdrm-dev
+apt install -y libpcl-dev
 apt-get install -y uthash-dev
 apt-get install -y libpcap-dev
 cp -rf /usr/include/drm/* /usr/include/

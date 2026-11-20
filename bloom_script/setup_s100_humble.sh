@@ -1,8 +1,8 @@
 #!/bin/bash
 
 curl -sSL https://archive.d-robotics.cc/keys/sunrise.gpg -o /usr/share/keyrings/sunrise.gpg
-+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/sunrise.gpg] https://archive.d-robotics.cc/ubuntu-rdk-s100-rc/ jammy main" | sudo    tee /etc/apt/sources.list.d/sunrise.list > /dev/null
-+#echo "deb [trusted=true arch=$(dpkg --print-architecture)] http://sysgbj2.hobot.cc/ubuntu-rdk-s100-beta jammy main" | sudo    tee /etc/apt/sources.list.d/multistrap-d-robotics.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/sunrise.gpg] https://archive.d-robotics.cc/ubuntu-rdk-s100-rc/ jammy main" | sudo    tee /etc/apt/sources.list.d/sunrise.list > /dev/null
+#echo "deb [trusted=true arch=$(dpkg --print-architecture)] http://sysgbj2.hobot.cc/ubuntu-rdk-s100-beta jammy main" | sudo    tee /etc/apt/sources.list.d/multistrap-d-robotics.list > /dev/null
 
 
 apt-get update
@@ -18,6 +18,7 @@ sudo ldconfig
 
 apt install -y rapidjson-dev
 apt install -y libgflags-dev
+apt install -y libpcl-dev
 #apt install -y librealsense2-dev
 #apt install -y libuthash-dev
 apt install -y  libdrm-dev
