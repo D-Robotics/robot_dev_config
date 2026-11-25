@@ -6,11 +6,11 @@ repositories:
   box/hobot_cv:
     type: git
     url: https://github.com/D-Robotics/hobot_cv.git
-    version: tros_2.3.8
+    version: tros_2.3.9
   box/hobot_msgs:
     type: git
     url: https://github.com/D-Robotics/hobot_msgs.git
-    version: tros_2.0.1rc1
+    version: tros_2.1.0
   box/hobot_websocket:
     type: git
     url: https://github.com/D-Robotics/hobot_websocket.git
@@ -18,7 +18,7 @@ repositories:
   box/hobot_codec:
     type: git
     url: https://github.com/D-Robotics/hobot_codec.git
-    version: tros_2.3.5
+    version: tros_2.4.0
   box/hobot_audio:
     type: git
     url: https://github.com/D-Robotics/hobot_audio.git
@@ -82,15 +82,15 @@ repositories:
   box/hobot_perception/hobot_stereonet:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet.git
-    version: tros_2.5.9
+    version: tros_2.6.0
+  box/hobot_perception/pointcloud_web_viewer:
+    type: git
+    url: https://github.com/D-Robotics/pointcloud_web_viewer.git
+    version: tros_1.0.2
   box/hobot_perception/hobot_stereonet_utils:
     type: git
     url: https://github.com/D-Robotics/hobot_stereonet_utils.git
     version: tros_2.3.4
-  box/hobot_perception/pointcloud_web_viewer:
-    type: git
-    url: https://github.com/D-Robotics/pointcloud_web_viewer.git
-    version: tros_1.0.0
   box/hobot_perception/dstereo_occnet:
     type: git
     url: https://github.com/D-Robotics/dstereo_occnet
@@ -135,6 +135,14 @@ repositories:
     type: git
     url: https://github.com/D-Robotics/hand_landmarks_mediapipe.git
     version: tros_1.2.1
+  box/hobot_perception/mono_ocr_detection:
+    type: git
+    url: https://github.com/D-Robotics/mono_ocr_detection.git
+    version: tros_0.2.0
+  box/hobot_perception/mono_ocr_recognition:
+    type: git
+    url: https://github.com/D-Robotics/mono_ocr_recognition.git
+    version: tros_0.2.0
   box/hobot_xlm:
     type: git
     url: https://github.com/D-Robotics/hobot_xlm.git
@@ -186,7 +194,7 @@ repositories:
   tools/hobot_image_publisher:
     type: git
     url: https://github.com/D-Robotics/hobot_image_publisher.git
-    version: tros_2.2.3
+    version: tros_2.4.0
   tools/hobot_visualization:
     type: git
     url: https://github.com/D-Robotics/hobot_visualization.git
@@ -202,7 +210,7 @@ repositories:
   box/hobot_sensor/hobot_mipi_cam:
     type: git
     url: https://github.com/D-Robotics/hobot_mipi_cam.git
-    version: tros_2.5.6
+    version: tros_2.5.7
   box/hobot_sensor/hobot_rtsp_client:
     type: git
     url: https://github.com/D-Robotics/hobot_rtsp_client.git
@@ -250,23 +258,23 @@ repositories:
   box/speech_agent_tts:
     type: git
     url: https://github.com/D-Robotics/speech_agent_tts.git
-    version: tros_1.1.0
+    version: tros_1.2.0
   box/speech_agent_asr:
     type: git
     url: https://github.com/D-Robotics/speech_agent_asr.git
-    version: tros_1.1.0
+    version: tros_1.3.0
   box/speech_agent_audio:
     type: git
     url: https://github.com/D-Robotics/speech_agent_audio.git
-    version: tros_1.1.0
+    version: tros_1.3.0
   ../tros_arm_build:
     type: git
     url: https://github.com/D-Robotics/tros_arm_build.git
-    version: tros-v2.5.6
+    version: tros-v2.5.7
   tros/trosdep:
     type: git
     url: https://github.com/D-Robotics/trosdep.git
-    version: tros-v0.1.0
+    version: tros-v0.1.2
   ros/rosdistro:
     type: git
     url: https://github.com/ros/rosdistro.git
